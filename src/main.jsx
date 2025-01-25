@@ -10,6 +10,7 @@ import Statistics from "./components/Statistics/Statistics.jsx";
 import Profile from "./components/Profile/Profile.jsx";
 import Cart from "./components/Cart/Cart.jsx";
 import Wishlist from "./components/Wishlist/Wishlist.jsx";
+import ProductDetails from "./components/Product Details/ProductDetails.jsx";
 
 // *React Router DOM Paths & Elements
 
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
       {
         path: "wishlist",
         element: <Wishlist></Wishlist>,
+      },
+      {
+        path: "products/:product_id",
+        element: <ProductDetails></ProductDetails>,
+        loader: ()=> fetch('../public/gadgetProducts.json')
       },
     ],
   },

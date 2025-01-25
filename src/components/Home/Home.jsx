@@ -2,7 +2,6 @@ import banner from "../../assets/banner.jpg";
 import Gadget from "../Gadgets/Gadget";
 
 const Home = () => {
-
   return (
     <div className="max-w-screen-2xl mx-auto">
       <header className="text-center relative">
