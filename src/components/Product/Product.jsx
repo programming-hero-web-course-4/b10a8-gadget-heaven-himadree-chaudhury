@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
-  const { product_id,product_title, product_image, price } = product;
+  const { product_id, product_title, product_image, price } = product;
   return (
     <div className="bg-slate-100 rounded-2xl p-4 space-y-4">
       <div className=" space-y-2 flex flex-col">
