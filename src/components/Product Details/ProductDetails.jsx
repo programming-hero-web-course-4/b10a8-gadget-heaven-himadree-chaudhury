@@ -1,6 +1,7 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import "./ProductDetail.css";
 import { useState } from "react";
+import { addToStoredCart, addToWishedCart } from "../../utilities/localStorage";
 
 const ProductDetails = () => {
   // *Get Product ID
@@ -11,7 +12,6 @@ const ProductDetails = () => {
   const product = data.find((product) => product.product_id === product_id);
   // *Destructuring Product Data
   const {
-    product_id: current_id,
     product_title,
     product_image,
     price,
@@ -27,14 +27,17 @@ const ProductDetails = () => {
   const handleWishlist = () => {
     setIsClicked(!isClicked);
   };
-
   // *Custom Rating Functionality
   // *Store Custom Rating
   const [rate, setRate] = useState(0);
   // *Handle Rating
   const handleStartRatings = (rate) => {
     setRate(rate);
-  };
+    };
+    
+
+
+
 
   return (
     <div>
@@ -89,8 +92,8 @@ const ProductDetails = () => {
                 {/* Product Specifications */}
                 <h2 className="font-bold text-xl">Specifications :</h2>
                 <ol className="list-decimal pl-4 text-slate-700">
-                  {Specification.map((feature) => (
-                    <li key={current_id}>{feature}</li>
+                  {Specification.map((feature,idx) => (
+                    <li key={idx}>{feature}</li>
                   ))}
                 </ol>
                 <div className="space-y-2">
@@ -201,7 +204,7 @@ const ProductDetails = () => {
                 </div>
                 <div className="flex items-center gap-4">
                   {/* Add To Cart Btn */}
-                  <Link className="flex items-center gap-2 bg-[#9538E2] text-white font-semibold px-4 py-2 rounded-xl">
+                  <Link onClick={()=> addToStoredCart(product_id)} className="flex items-center gap-2 bg-[#9538E2] text-white font-semibold px-4 py-2 rounded-xl">
                     Add To Cart
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -220,7 +223,7 @@ const ProductDetails = () => {
                   </Link>
                   {/* Add To Wishlist Btn */}
                   <Link
-                    onClick={handleWishlist}
+                                      onClick={() => { handleWishlist();addToWishedCart(product_id) }}
                     className={`p-2 border border-slate-200 rounded-full ${
                       isClicked && "bg-[#9538E2] text-white"
                     }`}
