@@ -2,7 +2,7 @@
   {
     "product_id": "P1001",
     "product_title": "Galaxy Tech Laptop X15",
-    "product_image": "https://example.com/images/laptop_x15.jpg",
+    "product_image": "../src/assets/Galaxy Tech Laptop X15.jpg",
     "category": "Laptop",
     "price": 1200,
     "description": "A sleek and powerful laptop with cutting-edge technology.",
@@ -23,7 +23,7 @@
   {
     "product_id": "P1002",
     "product_title": "iPhone 15 Pro",
-    "product_image": "https://example.com/images/iphone_15pro.jpg",
+    "product_image": "../src/assets/iPhone 15 Pro.jpg",
     "category": "Smartphone",
     "price": 1299,
     "description": "The latest iPhone with advanced features and superior performance.",
@@ -44,7 +44,7 @@
   {
     "product_id": "P1003",
     "product_title": "AirPods Pro 3",
-    "product_image": "https://example.com/images/airpods_pro3.jpg",
+    "product_image": "../src/assets/AirPods Pro 3.jpg",
     "category": "Accessories",
     "price": 249,
     "description": "Noise-cancelling wireless earbuds with improved sound quality.",

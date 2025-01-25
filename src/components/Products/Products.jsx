@@ -14,10 +14,8 @@ const Products = () => {
   }, []);
 
     return (
-        <div>
-            <h1>Products Section</h1>
-        <h1>{products.length}</h1>
-        <section className="grid grid-cols-3">
+      <div>
+        <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {products.map((product) => (
             <Product key={product.product_id} product={product}></Product>
           ))}

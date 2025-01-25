@@ -5,10 +5,10 @@ import SideBar from "../SideBar/SideBar";
 const Home = () => {
   return (
     <div className="max-w-screen-2xl mx-auto">
-      <header className="text-center">
+      <header className="text-center relative">
         {/* Hero Section */}
         <div className="p-4">
-          <div className="bg-[#9538E2] text-white rounded-2xl space-y-5 pb-32 md:pb-40 lg:pb-80 pt-12 relative ">
+          <div className="bg-[#9538E2] text-white rounded-2xl space-y-5 pb-32 md:pb-40 lg:pb-80 pt-12">
             <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold">
               Upgrade Your Tech Accessorize with Gadget Heaven Accessories
             </h1>
@@ -23,7 +23,7 @@ const Home = () => {
           </div>
         </div>
         {/* Banner */}
-        <div className="absolute bottom-44 md:-bottom-64 lg:bottom-52 xl:bottom-2">
+        <div className="absolute -bottom-28 md:-bottom-32 lg:-bottom-72 xl:-bottom-80">
           <div className="border border-slate-300 rounded-2xl bg-[#ffffff4d] w-11/12 md:w-2/4 lg:w-4/5 xl:w-3/5 mx-auto ">
             <img className="rounded-3xl p-3" src={banner} alt="" />
           </div>
@@ -34,11 +34,11 @@ const Home = () => {
       <section className="p-4">
         <div className="pt-44 md:pt-64 lg:pt-80">
           <h1 className="text-center font-bold text-3xl">Explore Cutting-Edge Gadgets</h1>
-          <div>
-            <div>
+          <div className="grid grid-cols-7 gap-5 py-8">
+            <div className="col-span-1">
               <SideBar></SideBar>
             </div>
-            <div>
+            <div className="col-span-6">
               <Products></Products>
             </div>
           </div>
