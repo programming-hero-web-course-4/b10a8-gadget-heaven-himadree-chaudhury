@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
-const Cart = ({ product, removeProduct }) => {
-  const { product_id,product_title, product_image, price, description } =
+const Cart = ({ product, removeCartProduct}) => {
+  const { product_id, product_title, product_image, price, description } =
     product;
 
   return (
@@ -18,7 +18,7 @@ const Cart = ({ product, removeProduct }) => {
       </div>
       <div className="cursor-pointer">
         <svg
-          onClick={() => removeProduct(product_id)}
+          onClick={() => removeCartProduct(product_id)}
           style={{ color: "red" }}
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -40,7 +40,7 @@ const Cart = ({ product, removeProduct }) => {
 
 Cart.propTypes = {
     product: PropTypes.object,
-    removeProduct:PropTypes.func
+    removeCartProduct:PropTypes.func
 };
 
 export default Cart;
