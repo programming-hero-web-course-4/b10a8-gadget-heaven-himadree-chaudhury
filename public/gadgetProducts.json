@@ -24,7 +24,7 @@
     "product_id": "P1002",
     "product_title": "iPhone 15 Pro",
     "product_image": "../src/assets/iPhone 15 Pro.jpg",
-    "category": "Smartphone",
+    "category": "iPhone",
     "price": 1299,
     "description": "The latest iPhone with advanced features and superior performance.",
     "Specification": [
@@ -181,7 +181,7 @@
     "product_id": "P1010",
     "product_title": "Apple Watch Series 9",
     "product_image": "https://example.com/images/apple_watch9.jpg",
-    "category": "Smartwatch",
+    "category": "iPhone",
     "price": 429,
     "description": "The most advanced Apple Watch yet.",
     "Specification": ["Always-On Retina Display", "ECG App", "Crash Detection"],

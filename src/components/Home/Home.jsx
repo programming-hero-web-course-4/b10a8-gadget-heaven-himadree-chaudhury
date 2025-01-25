@@ -1,8 +1,8 @@
 import banner from "../../assets/banner.jpg";
-import Products from "../Products/Products";
-import SideBar from "../SideBar/SideBar";
+import Gadget from "../Gadgets/Gadget";
 
 const Home = () => {
+
   return (
     <div className="max-w-screen-2xl mx-auto">
       <header className="text-center relative">
@@ -33,15 +33,10 @@ const Home = () => {
       {/* Featured Products */}
       <section className="p-4">
         <div className="pt-44 md:pt-64 lg:pt-80">
-          <h1 className="text-center font-bold text-3xl">Explore Cutting-Edge Gadgets</h1>
-          <div className="grid grid-cols-7 gap-5 py-8">
-            <div className="col-span-1">
-              <SideBar></SideBar>
-            </div>
-            <div className="col-span-6">
-              <Products></Products>
-            </div>
-          </div>
+          <h1 className="text-center font-bold text-3xl">
+            Explore Cutting-Edge Gadgets
+          </h1>
+          <Gadget></Gadget>
         </div>
       </section>
     </div>
