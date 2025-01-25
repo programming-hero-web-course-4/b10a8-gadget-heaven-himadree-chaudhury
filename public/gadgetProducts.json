@@ -1,0 +1,404 @@
+[
+  {
+    "product_id": "P1001",
+    "product_title": "Galaxy Tech Laptop X15",
+    "product_image": "https://example.com/images/laptop_x15.jpg",
+    "category": "Laptop",
+    "price": 1200,
+    "description": "A sleek and powerful laptop with cutting-edge technology.",
+    "Specification": [
+      "16GB RAM",
+      "512GB SSD",
+      "Intel i7 Processor",
+      "15.6-inch FHD Display"
+    ],
+    "availability": true,
+    "rating": 4.5,
+    "reviews": [
+      "Great performance!",
+      "Highly recommended for work and gaming.",
+      "Battery life could be better."
+    ]
+  },
+  {
+    "product_id": "P1002",
+    "product_title": "iPhone 15 Pro",
+    "product_image": "https://example.com/images/iphone_15pro.jpg",
+    "category": "Smartphone",
+    "price": 1299,
+    "description": "The latest iPhone with advanced features and superior performance.",
+    "Specification": [
+      "128GB Storage",
+      "A17 Bionic Chip",
+      "48MP Camera",
+      "5G Connectivity"
+    ],
+    "availability": true,
+    "rating": 4.8,
+    "reviews": [
+      "Stunning design!",
+      "Camera quality is phenomenal.",
+      "Expensive but worth it."
+    ]
+  },
+  {
+    "product_id": "P1003",
+    "product_title": "AirPods Pro 3",
+    "product_image": "https://example.com/images/airpods_pro3.jpg",
+    "category": "Accessories",
+    "price": 249,
+    "description": "Noise-cancelling wireless earbuds with improved sound quality.",
+    "Specification": [
+      "Active Noise Cancellation",
+      "Spatial Audio",
+      "6 Hours Battery Life"
+    ],
+    "availability": true,
+    "rating": 4.6,
+    "reviews": [
+      "Perfect for everyday use!",
+      "Great fit and sound.",
+      "Wish it had better battery life."
+    ]
+  },
+  {
+    "product_id": "P1004",
+    "product_title": "Galaxy Watch 6",
+    "product_image": "https://example.com/images/galaxy_watch6.jpg",
+    "category": "Smartwatch",
+    "price": 399,
+    "description": "A stylish smartwatch with health tracking features.",
+    "Specification": [
+      "1.4-inch AMOLED Display",
+      "Heart Rate Monitor",
+      "GPS",
+      "Water Resistant"
+    ],
+    "availability": true,
+    "rating": 4.4,
+    "reviews": [
+      "Very useful for fitness tracking!",
+      "Looks premium.",
+      "Software could be more intuitive."
+    ]
+  },
+  {
+    "product_id": "P1005",
+    "product_title": "Xiaomi Mi 13 Ultra",
+    "product_image": "https://example.com/images/mi_13ultra.jpg",
+    "category": "Smartphone",
+    "price": 899,
+    "description": "Flagship phone with exceptional camera and battery performance.",
+    "Specification": [
+      "12GB RAM",
+      "1TB Storage",
+      "50MP Quad Camera",
+      "120Hz AMOLED Display"
+    ],
+    "availability": true,
+    "rating": 4.7,
+    "reviews": [
+      "Superb camera!",
+      "Fast and efficient.",
+      "Love the storage options."
+    ]
+  },
+  {
+    "product_id": "P1006",
+    "product_title": "Logitech MX Master 4",
+    "product_image": "https://example.com/images/mx_master4.jpg",
+    "category": "Accessories",
+    "price": 119,
+    "description": "Premium wireless mouse with ergonomic design.",
+    "Specification": ["Bluetooth Connectivity", "8 Buttons", "4000 DPI Sensor"],
+    "availability": true,
+    "rating": 4.9,
+    "reviews": [
+      "Best mouse for productivity.",
+      "Very comfortable for long hours.",
+      "Highly responsive."
+    ]
+  },
+  {
+    "product_id": "P1007",
+    "product_title": "Lenovo Yoga Slim 7",
+    "product_image": "https://example.com/images/yoga_slim7.jpg",
+    "category": "Laptop",
+    "price": 1100,
+    "description": "A lightweight and portable laptop with premium features.",
+    "Specification": [
+      "AMD Ryzen 7",
+      "16GB RAM",
+      "1TB SSD",
+      "14-inch QHD Display"
+    ],
+    "availability": false,
+    "rating": 4.3,
+    "reviews": [
+      "Great for travel!",
+      "Build quality is amazing.",
+      "Waiting for restock."
+    ]
+  },
+  {
+    "product_id": "P1008",
+    "product_title": "Sony WH-1000XM5",
+    "product_image": "https://example.com/images/wh_1000xm5.jpg",
+    "category": "Accessories",
+    "price": 399,
+    "description": "Industry-leading noise-cancelling headphones.",
+    "Specification": ["30 Hours Battery", "LDAC Support", "Touch Controls"],
+    "availability": true,
+    "rating": 4.8,
+    "reviews": [
+      "Sound quality is exceptional!",
+      "Very comfortable to wear.",
+      "Expensive but worth it."
+    ]
+  },
+  {
+    "product_id": "P1009",
+    "product_title": "OnePlus Nord CE 3 Lite",
+    "product_image": "https://example.com/images/nord_ce3lite.jpg",
+    "category": "Smartphone",
+    "price": 299,
+    "description": "Affordable phone with excellent performance.",
+    "Specification": [
+      "8GB RAM",
+      "128GB Storage",
+      "108MP Camera",
+      "5000mAh Battery"
+    ],
+    "availability": true,
+    "rating": 4.2,
+    "reviews": [
+      "Best value for money.",
+      "Smooth user experience.",
+      "Camera is decent for the price."
+    ]
+  },
+  {
+    "product_id": "P1010",
+    "product_title": "Apple Watch Series 9",
+    "product_image": "https://example.com/images/apple_watch9.jpg",
+    "category": "Smartwatch",
+    "price": 429,
+    "description": "The most advanced Apple Watch yet.",
+    "Specification": ["Always-On Retina Display", "ECG App", "Crash Detection"],
+    "availability": true,
+    "rating": 4.6,
+    "reviews": [
+      "A great upgrade from Series 7.",
+      "Seamless integration with iPhone.",
+      "Battery life could improve."
+    ]
+  },
+  {
+    "product_id": "P1011",
+    "product_title": "Dell XPS 13 Plus",
+    "product_image": "https://example.com/images/xps_13plus.jpg",
+    "category": "Laptop",
+    "price": 1400,
+    "description": "A high-performance ultrabook with stunning visuals.",
+    "Specification": [
+      "13th Gen Intel i7",
+      "16GB RAM",
+      "512GB SSD",
+      "13.4-inch OLED Display"
+    ],
+    "availability": true,
+    "rating": 4.7,
+    "reviews": [
+      "Compact and powerful!",
+      "Best display I’ve seen.",
+      "Keyboard layout takes getting used to."
+    ]
+  },
+  {
+    "product_id": "P1012",
+    "product_title": "Google Pixel 8",
+    "product_image": "https://example.com/images/pixel_8.jpg",
+    "category": "Smartphone",
+    "price": 699,
+    "description": "Google's latest smartphone with AI features.",
+    "Specification": [
+      "Tensor G3",
+      "128GB Storage",
+      "50MP Dual Camera",
+      "Android 14"
+    ],
+    "availability": true,
+    "rating": 4.5,
+    "reviews": [
+      "AI features are game-changing!",
+      "Pure Android experience.",
+      "Needs better battery life."
+    ]
+  },
+  {
+    "product_id": "P1013",
+    "product_title": "Samsung Tab S9 Ultra",
+    "product_image": "https://example.com/images/tab_s9ultra.jpg",
+    "category": "Tablet",
+    "price": 1199,
+    "description": "A premium tablet with a massive display.",
+    "Specification": [
+      "14.6-inch AMOLED",
+      "12GB RAM",
+      "1TB Storage",
+      "S Pen Included"
+    ],
+    "availability": true,
+    "rating": 4.8,
+    "reviews": [
+      "Great for multitasking.",
+      "Amazing display quality!",
+      "A bit heavy to carry."
+    ]
+  },
+  {
+    "product_id": "P1014",
+    "product_title": "Bose QuietComfort Ultra",
+    "product_image": "https://example.com/images/qc_ultra.jpg",
+    "category": "Accessories",
+    "price": 299,
+    "description": "Top-notch noise-cancelling headphones with superb audio.",
+    "Specification": [
+      "Bluetooth 5.3",
+      "24 Hours Battery",
+      "Comfortable Ear Cups"
+    ],
+    "availability": false,
+    "rating": 4.7,
+    "reviews": [
+      "Amazing for travel!",
+      "Crystal-clear sound.",
+      "Can’t wait for restock."
+    ]
+  },
+  {
+    "product_id": "P1015",
+    "product_title": "Microsoft Surface Pro 9",
+    "product_image": "https://example.com/images/surface_pro9.jpg",
+    "category": "Tablet",
+    "price": 999,
+    "description": "A versatile 2-in-1 device for work and play.",
+    "Specification": [
+      "Intel i5",
+      "8GB RAM",
+      "256GB SSD",
+      "12.3-inch PixelSense Display"
+    ],
+    "availability": true,
+    "rating": 4.6,
+    "reviews": [
+      "Perfect for productivity.",
+      "Highly portable.",
+      "The keyboard is sold separately."
+    ]
+  },
+  {
+    "product_id": "P1016",
+    "product_title": "ASUS ROG Phone 7",
+    "product_image": "https://example.com/images/rog_phone7.jpg",
+    "category": "Smartphone",
+    "price": 999,
+    "description": "A gaming phone with top-notch performance and cooling.",
+    "Specification": [
+      "16GB RAM",
+      "512GB Storage",
+      "165Hz AMOLED Display",
+      "Snapdragon 8 Gen 2"
+    ],
+    "availability": true,
+    "rating": 4.9,
+    "reviews": [
+      "The ultimate gaming phone!",
+      "Excellent battery life.",
+      "A bit bulky."
+    ]
+  },
+  {
+    "product_id": "P1017",
+    "product_title": "HP Spectre x360",
+    "product_image": "https://example.com/images/spectre_x360.jpg",
+    "category": "Laptop",
+    "price": 1350,
+    "description": "A convertible laptop with exceptional style and performance.",
+    "Specification": [
+      "Intel i7",
+      "16GB RAM",
+      "1TB SSD",
+      "13.5-inch OLED Touchscreen"
+    ],
+    "availability": true,
+    "rating": 4.8,
+    "reviews": [
+      "Fantastic build quality.",
+      "Great for creative professionals.",
+      "Pricey but worth it."
+    ]
+  },
+  {
+    "product_id": "P1018",
+    "product_title": "Garmin Forerunner 965",
+    "product_image": "https://example.com/images/forerunner_965.jpg",
+    "category": "Smartwatch",
+    "price": 599,
+    "description": "A premium smartwatch for fitness enthusiasts.",
+    "Specification": [
+      "1.4-inch AMOLED Display",
+      "GPS",
+      "Multi-Sport Modes",
+      "14-Day Battery"
+    ],
+    "availability": true,
+    "rating": 4.7,
+    "reviews": [
+      "Perfect for runners.",
+      "Accurate fitness tracking.",
+      "A bit expensive."
+    ]
+  },
+  {
+    "product_id": "P1019",
+    "product_title": "Sony Xperia 1 V",
+    "product_image": "https://example.com/images/xperia_1v.jpg",
+    "category": "Smartphone",
+    "price": 1199,
+    "description": "A phone designed for photographers and videographers.",
+    "Specification": [
+      "12GB RAM",
+      "256GB Storage",
+      "4K HDR OLED Display",
+      "Triple Camera System"
+    ],
+    "availability": false,
+    "rating": 4.5,
+    "reviews": [
+      "Great for content creators.",
+      "Unique 4K display.",
+      "Limited availability."
+    ]
+  },
+  {
+    "product_id": "P1020",
+    "product_title": "JBL Charge 5",
+    "product_image": "https://example.com/images/jbl_charge5.jpg",
+    "category": "Accessories",
+    "price": 179,
+    "description": "A portable Bluetooth speaker with deep bass and waterproof design.",
+    "Specification": [
+      "IP67 Waterproof",
+      "20 Hours Battery",
+      "Powerbank Functionality"
+    ],
+    "availability": true,
+    "rating": 4.6,
+    "reviews": [
+      "Amazing sound quality!",
+      "Perfect for outdoor use.",
+      "Charging port could be better."
+    ]
+  }
+]

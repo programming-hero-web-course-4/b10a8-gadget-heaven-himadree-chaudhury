@@ -1,5 +1,6 @@
 
-const Profile = () => {
+
+const Heading = () => {
     return (
         <div>
             
@@ -7,4 +8,4 @@ const Profile = () => {
     );
 };
 
-export default Profile;
+export default Heading;

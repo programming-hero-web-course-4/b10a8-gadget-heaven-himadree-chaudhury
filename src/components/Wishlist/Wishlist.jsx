@@ -1,5 +1,5 @@
 
-const Profile = () => {
+const Wishlist = () => {
     return (
         <div>
             
@@ -7,4 +7,4 @@ const Profile = () => {
     );
 };
 
-export default Profile;
+export default Wishlist;
