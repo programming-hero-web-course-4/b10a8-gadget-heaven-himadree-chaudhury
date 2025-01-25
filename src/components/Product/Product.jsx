@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
   const { product_title, product_image, price } = product;
@@ -15,9 +16,12 @@ const Product = ({ product }) => {
         <h1 className="font-bold text-xl">{product_title}</h1>
         <p>Price : {price} $</p>
       </div>
-      <button className="border border-[#9538E2] text-[#9538E2] font-bold px-4 py-2 rounded-3xl hover:bg-[#9538E2] hover:text-white cursor-pointer duration-300 transition-all w-3/6">
+      <Link
+        to=""
+        className="border border-[#9538E2] text-[#9538E2] font-bold px-4 py-2 rounded-3xl hover:bg-[#9538E2] hover:text-white cursor-pointer duration-300 transition-all w-3/6"
+      >
         View Details
-      </button>
+      </Link>
     </div>
   );
 };
