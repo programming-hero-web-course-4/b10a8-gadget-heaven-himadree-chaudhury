@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import { addToStoredCart } from "../../utilities/localStorage";
 
 const Wishlist = ({ product, removeWishlistProduct }) => {
   const { product_id, product_title, product_image, price, description } =
@@ -10,10 +12,18 @@ const Wishlist = ({ product, removeWishlistProduct }) => {
         <div className="w-40 h-32 overflow-hidden object-cover aspect-square rounded-xl border border-slate-200">
           <img src={product_image} alt={product_title} />
         </div>
-        <div>
-          <h1>{product_title}</h1>
+        <div className="space-y-2">
+          <h1 className="font-bold text-xl">{product_title}</h1>
           <p>{description}</p>
-          <h2>{price}</h2>
+          <h2 className="font-semibold">Price : {price} $</h2>
+          {/* Add To Cart Btn */}
+          <Link
+            onClick={() => addToStoredCart(product_id)}
+            className="bg-[#9538E2] text-white font-semibold px-4 py-2 -ml-2 rounded-xl"
+          >
+            Add To Cart
+           
+          </Link>
         </div>
       </div>
       <div className="cursor-pointer">

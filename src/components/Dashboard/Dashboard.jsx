@@ -29,14 +29,15 @@ const Dashboard = () => {
 
   // *Store Products in Cart
   const [cartProducts, setCartProducts] = useState([]);
+    const storedCartID = getCartList();
 
   const handleCartProducts = () => {
-    const storedCartID = getCartList();
     const cartGadgets = products.filter((product) =>
       storedCartID.includes(product.product_id)
     );
     setCartProducts(cartGadgets);
   };
+
 
   // *Cart Total Cost
   const cartCostAry = cartProducts.map((product) => product.price);

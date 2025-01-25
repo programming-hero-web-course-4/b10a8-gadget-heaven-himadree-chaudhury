@@ -11,9 +11,9 @@ const Cart = ({ product, removeCartProduct}) => {
           <img src={product_image} alt={product_title} />
         </div>
         <div>
-          <h1>{product_title}</h1>
+          <h1 className="font-bold text-xl">{product_title}</h1>
           <p>{description}</p>
-          <h2>{price}</h2>
+          <h2 className="font-semibold">Price : {price} $</h2>
         </div>
       </div>
       <div className="cursor-pointer">

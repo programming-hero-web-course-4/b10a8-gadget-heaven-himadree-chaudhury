@@ -33,11 +33,7 @@ const ProductDetails = () => {
   // *Handle Rating
   const handleStartRatings = (rate) => {
     setRate(rate);
-    };
-    
-
-
-
+  };
 
   return (
     <div>
@@ -92,7 +88,7 @@ const ProductDetails = () => {
                 {/* Product Specifications */}
                 <h2 className="font-bold text-xl">Specifications :</h2>
                 <ol className="list-decimal pl-4 text-slate-700">
-                  {Specification.map((feature,idx) => (
+                  {Specification.map((feature, idx) => (
                     <li key={idx}>{feature}</li>
                   ))}
                 </ol>
@@ -204,7 +200,10 @@ const ProductDetails = () => {
                 </div>
                 <div className="flex items-center gap-4">
                   {/* Add To Cart Btn */}
-                  <Link onClick={()=> addToStoredCart(product_id)} className="flex items-center gap-2 bg-[#9538E2] text-white font-semibold px-4 py-2 rounded-xl">
+                  <Link
+                    onClick={() => addToStoredCart(product_id)}
+                    className="flex items-center gap-2 bg-[#9538E2] text-white font-semibold px-4 py-2 rounded-xl"
+                  >
                     Add To Cart
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -223,7 +222,10 @@ const ProductDetails = () => {
                   </Link>
                   {/* Add To Wishlist Btn */}
                   <Link
-                                      onClick={() => { handleWishlist();addToWishedCart(product_id) }}
+                    onClick={() => {
+                      handleWishlist();
+                      addToWishedCart(product_id);
+                    }}
                     className={`p-2 border border-slate-200 rounded-full ${
                       isClicked && "bg-[#9538E2] text-white"
                     }`}
