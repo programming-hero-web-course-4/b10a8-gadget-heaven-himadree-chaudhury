@@ -1,9 +1,13 @@
+import { Helmet } from "react-helmet-async";
 
 const Profile = () => {
     return (
-        <div>
-            
-        </div>
+      <div>
+        {/* React Helmet */}
+        <Helmet>
+          <title>Gadget Heaven | Profile</title>
+        </Helmet>
+      </div>
     );
 };
 

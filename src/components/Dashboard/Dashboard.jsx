@@ -8,6 +8,7 @@ import {
 } from "../../utilities/localStorage";
 import Cart from "../Cart/Cart";
 import Wishlist from "../Wishlist/Wishlist";
+import { Helmet } from "react-helmet-async";
 
 const Dashboard = () => {
   // *Show Active Selection Button
@@ -107,6 +108,11 @@ const Dashboard = () => {
 
   return (
     <div>
+      {/* React Helmet */}
+      <Helmet>
+        <title>Gadget Heaven | Dashboard</title>
+      </Helmet>
+      
       <section className="max-w-screen-2xl p-4 mx-auto">
         {/* Products Details Banner */}
         <div className="">
@@ -135,7 +141,8 @@ const Dashboard = () => {
                 >
                   Cart
                 </Link>
-                <Link to="/wishlist"
+                <Link
+                  to="/wishlist"
                   onClick={() => {
                     handleView("wishlist");
                     handleWishlistProducts();

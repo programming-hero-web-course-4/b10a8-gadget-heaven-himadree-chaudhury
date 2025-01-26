@@ -1,9 +1,15 @@
+import { Helmet } from "react-helmet-async";
 import banner from "../../assets/banner.jpg";
 import Gadget from "../Gadgets/Gadget";
 
 const Home = () => {
   return (
     <div className="max-w-screen-2xl mx-auto">
+      {/* React Helmet */}
+      <Helmet>
+        <title>Gadget Heaven | Home</title>
+      </Helmet>
+
       <header className="text-center relative">
         {/* Hero Section */}
         <div className="p-4 bg-[#9538E2] rounded-b-2xl">

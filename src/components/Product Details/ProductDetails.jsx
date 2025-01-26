@@ -6,10 +6,13 @@ import { addToStoredCart, addToWishedCart } from "../../utilities/localStorage";
 const ProductDetails = () => {
   // *Get Product ID
   const { product_id } = useParams();
+
   // *Get All Products
   const data = useLoaderData();
+
   // *Find Current Product
   const product = data.find((product) => product.product_id === product_id);
+
   // *Destructuring Product Data
   const {
     product_title,
@@ -23,16 +26,26 @@ const ProductDetails = () => {
 
   // *Wishlist Btn Functionality
   const [isClicked, setIsClicked] = useState(false);
+
   // *Handle Wishlist
-  const handleWishlist = () => {
-    setIsClicked(!isClicked);
+  const handleWishlist = (state) => {
+    setIsClicked(state);
+
   };
   // *Custom Rating Functionality
   // *Store Custom Rating
   const [rate, setRate] = useState(0);
+
   // *Handle Rating
   const handleStartRatings = (rate) => {
     setRate(rate);
+  };
+
+  // *Wishlist Button Disability
+const [clicked,setClicked] =useState(false)
+
+  const handleClick = (state) => {
+    setClicked(state)
   };
 
   return (
@@ -40,8 +53,8 @@ const ProductDetails = () => {
       <section className="max-w-screen-2xl mx-auto relative mb-80 md:mb-40 pb-80">
         {/* Products Details Banner */}
         <div className="">
-          <div className="p-4 text-center">
-            <div className="bg-[#9538E2] text-white rounded-2xl space-y-5 pb-32 pt-12">
+          <div className="p-4 text-center bg-[#9538E2] text-white rounded-b-2xl ">
+            <div className="space-y-5 pb-32 pt-12">
               <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold">
                 Product Details
               </h1>
@@ -221,14 +234,16 @@ const ProductDetails = () => {
                     </svg>
                   </Link>
                   {/* Add To Wishlist Btn */}
-                  <Link id="add-to-wishlist"
+                  <Link
+                    id="add-to-wishlist"
                     onClick={() => {
-                      handleWishlist();
+                      handleWishlist(true);
                       addToWishedCart(product_id);
+                      handleClick(true);
                     }}
-                    className={`p-2 border border-slate-200 rounded-full hover:border-[#9538E2] duration-200 transition-all ${
+                    className={`p-2 border border-slate-200 rounded-full  duration-200 transition-all ${
                       isClicked && "bg-[#9538E2] text-white"
-                    }`}
+                    } ${clicked && "cursor-not-allowed "}`}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

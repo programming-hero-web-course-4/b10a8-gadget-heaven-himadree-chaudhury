@@ -13,7 +13,7 @@ const Product = ({ product }) => {
             alt={product_title}
           />
         </div>
-        <div className="flex-grow pl-2">
+        <div className="grow pl-2">
           <h1 className="font-bold text-xl">{product_title}</h1>
           <p>Price : {price} $</p>
         </div>
