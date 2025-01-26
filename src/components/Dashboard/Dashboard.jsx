@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   getCartList,
   getWishList,
+  removeAllCartProducts,
   removeFromStoredCart,
   removeFromStoredWishlist,
 } from "../../utilities/localStorage";
 import Cart from "../Cart/Cart";
+import modalPic from "../../assets/Group.png";
 import Wishlist from "../Wishlist/Wishlist";
 import { Helmet } from "react-helmet-async";
 
@@ -69,7 +71,9 @@ const Dashboard = () => {
 
   // *Cart Total Cost
   const cartCostAry = cartProducts.map((product) => product.price);
-  const cartTotal = cartCostAry.reduce((a, b) => a + b, 0);
+  let cartTotal = cartCostAry.reduce((a, b) => a + b, 0);
+
+  console.log(parseInt(cartTotal));
 
   // *Handle Price Sort
   const handlePriceSort = () => {
@@ -106,13 +110,29 @@ const Dashboard = () => {
     );
   };
 
+  // *Purchase Button Functionality
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handlePurchase = () => {
+    setIsModalOpen(true);
+    removeAllCartProducts();
+  };
+
+  // *Modal Functionality
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    cartTotal = 0;
+    navigate("/");
+  };
+
   return (
     <div>
       {/* React Helmet */}
       <Helmet>
         <title>Gadget Heaven | Dashboard</title>
       </Helmet>
-      
+
       <section className="max-w-screen-2xl p-4 mx-auto">
         {/* Products Details Banner */}
         <div className="">
@@ -188,9 +208,54 @@ const Dashboard = () => {
                       />
                     </svg>
                   </Link>
-                  <Link className="flex gap-1 justify-center items-center border px-4 py-2 rounded-2xl font-semibold border-[#9538E2] bg-[#9538E2] text-white">
+                  <Link
+                    onClick={() => handlePurchase()}
+                    style={{
+                      pointerEvents:
+                        (cartProducts.length === 0 || cartTotal === 0) &&
+                        "none",
+                    }}
+                    className={`flex gap-1 justify-center items-center border px-4 py-2 rounded-2xl font-semibold border-[#9538E2] ${
+                      cartProducts.length === 0 || cartTotal === 0
+                        ? "text-[#9538E2]"
+                        : "bg-[#9538E2] text-white"
+                    }`}
+                  >
                     Purchase
                   </Link>
+                  {/* 
+                  // label======================= Modal Section Starts ======================= label //
+                  */}
+
+                  {isModalOpen && (
+                    <div className="fixed inset-0 flex items-center justify-center text-center ">
+                      <div className="border border-slate-200 p-2 rounded-2xl bg-white">
+                        <div className="bg-white p-16 rounded-2xl space-y-5 border border-slate-200">
+                          <div className="flex justify-center">
+                            <img src={modalPic} alt="" />
+                          </div>
+                          <h2 className="text-2xl font-semibold">
+                            Payment Successful
+                          </h2>
+                          <hr className="border-slate-300" />
+                          <div className="space-y-1 text-slate-700">
+                            <p>Thanks for purchasing.</p>
+                            <h2>Total : {cartTotal}</h2>
+                          </div>
+                          <Link
+                            onClick={handleCloseModal}
+                            className="border flex justify-center py-2 rounded-2xl font-semibold border-[#9538E2] bg-[#9538E2] text-white"
+                          >
+                            Close
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* 
+                  // label======================= Modal Section Ends ======================= label //
+                  */}
                 </div>
               </div>
               <div>

@@ -33,6 +33,10 @@ const removeFromStoredCart = (id) => {
   }
 };
 
+const removeAllCartProducts = () => {
+  localStorage.removeItem('cart');
+}
+
 // *Handle Wishlist Local Storage
 
 const getWishList = () => {
@@ -73,6 +77,7 @@ export {
   addToWishedCart,
   getCartList,
   removeFromStoredCart,
+  removeAllCartProducts,
   getWishList,
   removeFromStoredWishlist,
 };
