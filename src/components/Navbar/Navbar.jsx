@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "./Navbar.css"
 
 const Navbar = () => {
 
@@ -14,19 +15,27 @@ const Navbar = () => {
     <div className="max-w-screen-2xl mx-auto p-4">
       <nav className="flex justify-between items-center">
         {/* Web Title */}
-        <div className="font-bold text-xl">Gadget Heaven</div>
+        <div className="font-bold text-2xl">Gadget Heaven</div>
         {/* Desktop Navigation Links */}
-        <div className="hidden md:flex justify-center gap-4">
-          <Link to="/">Home</Link>
+        <div className="hidden md:flex justify-center gap-4 text-lg">
+          <Link className="navigation-pane" to="/">
+            Home
+          </Link>
 
-          <Link to="/statistics">Statistics</Link>
+          <Link className="navigation-pane" to="/statistics">
+            Statistics
+          </Link>
 
-          <Link to="/dashboard">Dashboard</Link>
+          <Link className="navigation-pane" to="/dashboard">
+            Dashboard
+          </Link>
 
-          <Link to="/profile">My Profile</Link>
+          <Link className="navigation-pane" to="/profile">
+            My Profile
+          </Link>
         </div>
         {/* Icons */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-4 text-lg">
           {/* Cart Icon */}
           <Link to="/cart">
             <svg
@@ -35,7 +44,7 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-6"
+              className="navigation-pane size-6"
             >
               <path
                 strokeLinecap="round"
@@ -52,7 +61,7 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-6"
+              className="navigation-pane size-6"
             >
               <path
                 strokeLinecap="round"
@@ -107,7 +116,7 @@ const Navbar = () => {
       </nav>
       {/* Mobile Navigation & Icons*/}
       <div style={{ display: menuToggle === false ? "none" : "block" }}>
-        <div className="flex flex-col gap-2 max-w-screen-2xl mx-auto p-4 md:hidden">
+        <div className="flex flex-col gap-2 max-w-screen-2xl mx-auto p-4 md:hidden text-lg">
           {/* Mobile Navigation Links */}
           <Link to="/">Home</Link>
 

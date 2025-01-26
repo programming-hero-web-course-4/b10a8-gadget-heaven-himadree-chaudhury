@@ -10,7 +10,7 @@ const Product = ({ product }) => {
           <img
             className="h-60 object-cover rounded-2xl"
             src={product_image}
-            alt={product_image}
+            alt={product_title}
           />
         </div>
         <div className="flex-grow pl-2">

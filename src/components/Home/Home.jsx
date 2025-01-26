@@ -16,7 +16,7 @@ const Home = () => {
               next level. From smart devices to the coolest accessories, we have
               it all!
             </p>
-            <button className="text-[#9538E2] bg-white px-6 md:px-8 py-3 text-lg font-semibold rounded-2xl">
+            <button className="text-[#9538E2] bg-white px-6 md:px-8 py-3 text-lg font-semibold rounded-2xl border border-white">
               Shop Now
             </button>
           </div>

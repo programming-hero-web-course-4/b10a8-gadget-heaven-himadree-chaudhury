@@ -62,7 +62,7 @@ const ProductDetails = () => {
                 <img
                   className="object-cover"
                   src={product_image}
-                  alt={product_image}
+                  alt={product_title}
                 />
               </div>
               {/* Details Section */}
@@ -202,7 +202,7 @@ const ProductDetails = () => {
                   {/* Add To Cart Btn */}
                   <Link
                     onClick={() => addToStoredCart(product_id)}
-                    className="flex items-center gap-2 bg-[#9538E2] text-white font-semibold px-4 py-2 rounded-xl"
+                    className="flex items-center gap-2 bg-[#9538E2] text-white font-semibold px-4 py-2 rounded-xl hover:bg-white hover:text-black border border-[#9538E2] duration-200 transition-all"
                   >
                     Add To Cart
                     <svg
@@ -221,12 +221,12 @@ const ProductDetails = () => {
                     </svg>
                   </Link>
                   {/* Add To Wishlist Btn */}
-                  <Link
+                  <Link id="add-to-wishlist"
                     onClick={() => {
                       handleWishlist();
                       addToWishedCart(product_id);
                     }}
-                    className={`p-2 border border-slate-200 rounded-full ${
+                    className={`p-2 border border-slate-200 rounded-full hover:border-[#9538E2] duration-200 transition-all ${
                       isClicked && "bg-[#9538E2] text-white"
                     }`}
                   >

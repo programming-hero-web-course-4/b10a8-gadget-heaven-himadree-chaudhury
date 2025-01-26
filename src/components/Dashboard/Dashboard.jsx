@@ -10,9 +10,8 @@ import Cart from "../Cart/Cart";
 import Wishlist from "../Wishlist/Wishlist";
 
 const Dashboard = () => {
-  // *Show Active Section
-  const [view, setView] = useState("");
-
+  // *Show Active Selection Button
+  const [view, setView] = useState("cart");
   const handleView = (view) => {
     setView(view);
   };
@@ -29,15 +28,43 @@ const Dashboard = () => {
 
   // *Store Products in Cart
   const [cartProducts, setCartProducts] = useState([]);
-    const storedCartID = getCartList();
+
+  // label==========================================================================================label //
+
+  // *Show Cart Products onLoad The Dashboard
+
+  useEffect(() => {
+    // *Fetch products and filter cart items in one flow
+    const fetchProductsAndCart = async () => {
+      try {
+        const response = await fetch("gadgetProducts.json");
+        const data = await response.json();
+        setProducts(data);
+
+        // *Filter cart products
+        const storedCartID = getCartList();
+        const cartGadgets = data.filter((product) =>
+          storedCartID.includes(product.product_id)
+        );
+        setCartProducts(cartGadgets);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+    fetchProductsAndCart();
+  }, []);
+
+  // label==========================================================================================label //
+
+  // *Filter Cart Products OnClick
 
   const handleCartProducts = () => {
+    const storedCartID = getCartList();
     const cartGadgets = products.filter((product) =>
       storedCartID.includes(product.product_id)
     );
     setCartProducts(cartGadgets);
   };
-
 
   // *Cart Total Cost
   const cartCostAry = cartProducts.map((product) => product.price);
@@ -48,6 +75,7 @@ const Dashboard = () => {
     const sortedCart = [...cartProducts].sort((a, b) => b.price - a.price);
     setCartProducts(sortedCart);
   };
+
   // *Handle Remove Cart Product
   const removeCartProduct = (id) => {
     removeFromStoredCart(id);
@@ -59,6 +87,7 @@ const Dashboard = () => {
   // *Store Products in Wishlist
   const [wishlistProducts, setWishlistProducts] = useState([]);
 
+  // *Filter Wishlist Products OnClick
   const handleWishlistProducts = () => {
     const storedWishlistID = getWishList();
     setWishlistProducts(
