@@ -22,23 +22,24 @@
   },
   {
     "product_id": "P1002",
-    "product_title": "iPhone 15 Pro",
-    "product_image": "../src/assets/iPhone 15 Pro.jpg",
-    "category": "iPhone",
-    "price": 1299,
-    "description": "The latest iPhone with advanced features and superior performance.",
+    "product_title": "ASUS ROG Zephyrus G16",
+    "product_image": "../src/assets/ASUS ROG Zephyrus G16.jpg",
+    "category": "Laptop",
+    "price": 1699,
+    "description": "High-performance gaming laptop with advanced cooling and stunning visuals.",
     "Specification": [
-      "128GB Storage",
-      "A17 Bionic Chip",
-      "48MP Camera",
-      "5G Connectivity"
+      "16GB RAM",
+      "1TB SSD",
+      "Intel Core i9-13900H",
+      "16-inch QHD+ 165Hz Display",
+      "NVIDIA GeForce RTX 4060"
     ],
     "availability": true,
     "rating": 4.8,
     "reviews": [
-      "Stunning design!",
-      "Camera quality is phenomenal.",
-      "Expensive but worth it."
+      "Handles every game smoothly!",
+      "Incredible display and design.",
+      "The fans can get a bit loud under load."
     ]
   },
   {
@@ -145,7 +146,7 @@
     "product_title": "Sony WH-1000XM5",
     "product_image": "../src/assets/Sony WH-1000XM5.jpg",
     "category": "Accessories",
-    "price": 399,
+    "price": 349,
     "description": "Industry-leading noise-cancelling headphones.",
     "Specification": ["30 Hours Battery", "LDAC Support", "Touch Controls"],
     "availability": true,
@@ -179,18 +180,24 @@
   },
   {
     "product_id": "P1010",
-    "product_title": "Apple Watch Series 9",
-    "product_image": "../src/assets/Apple Watch Series 9.jpg",
-    "category": "iPhone",
-    "price": 429,
-    "description": "The most advanced Apple Watch yet.",
-    "Specification": ["Always-On Retina Display", "ECG App", "Crash Detection"],
+    "product_title": "ASUS ZenBook Pro 14 OLED",
+    "product_image": "../src/assets/ASUS ZenBook Pro 14 OLED.webp",
+    "category": "Laptop",
+    "price": 1499,
+    "description": "A premium laptop with a stunning OLED display for creative professionals.",
+    "Specification": [
+      "16GB RAM",
+      "1TB SSD",
+      "AMD Ryzen 9 7940HS",
+      "14.5-inch 2.8K OLED 120Hz Display",
+      "Integrated Radeon Graphics"
+    ],
     "availability": true,
-    "rating": 4.6,
+    "rating": 4.7,
     "reviews": [
-      "A great upgrade from Series 7.",
-      "Seamless integration with iPhone.",
-      "Battery life could improve."
+      "Perfect for video editing and design.",
+      "Battery life is surprisingly good.",
+      "Keyboard is a bit cramped but manageable."
     ]
   },
   {
@@ -261,7 +268,7 @@
     "product_title": "Bose QuietComfort Ultra",
     "product_image": "../src/assets/Bose QuietComfort Ultra.jpg",
     "category": "Accessories",
-    "price": 299,
+    "price": 279,
     "description": "Top-notch noise-cancelling headphones with superb audio.",
     "Specification": [
       "Bluetooth 5.3",
@@ -302,7 +309,7 @@
     "product_title": "ASUS ROG Phone 7",
     "product_image": "../src/assets/ASUS ROG Phone 7.jpg",
     "category": "Smartphone",
-    "price": 999,
+    "price": 979,
     "description": "A gaming phone with top-notch performance and cooling.",
     "Specification": [
       "16GB RAM",
@@ -365,7 +372,7 @@
     "product_title": "Sony Xperia 1 V",
     "product_image": "../src/assets/Sony Xperia 1 V.webp",
     "category": "Smartphone",
-    "price": 1199,
+    "price": 1099,
     "description": "A phone designed for photographers and videographers.",
     "Specification": [
       "12GB RAM",
