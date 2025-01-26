@@ -122,6 +122,7 @@ const Dashboard = () => {
               </p>
               <div className="flex justify-center gap-5">
                 <Link
+                  to="/cart"
                   onClick={() => {
                     handleView("cart");
                     handleCartProducts();
@@ -134,7 +135,7 @@ const Dashboard = () => {
                 >
                   Cart
                 </Link>
-                <Link
+                <Link to="/wishlist"
                   onClick={() => {
                     handleView("wishlist");
                     handleWishlistProducts();

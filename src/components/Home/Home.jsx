@@ -6,8 +6,8 @@ const Home = () => {
     <div className="max-w-screen-2xl mx-auto">
       <header className="text-center relative">
         {/* Hero Section */}
-        <div className="p-4">
-          <div className="bg-[#9538E2] text-white rounded-2xl space-y-5 pb-32 md:pb-40 lg:pb-80 pt-12">
+        <div className="p-4 bg-[#9538E2] rounded-b-2xl">
+          <div className=" text-white space-y-5 pb-32 md:pb-40 lg:pb-80 pt-12">
             <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold">
               Upgrade Your Tech Accessorize with Gadget Heaven Accessories
             </h1>
