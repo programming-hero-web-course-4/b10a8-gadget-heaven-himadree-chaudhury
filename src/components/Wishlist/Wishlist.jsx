@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 import { addToStoredCart } from "../../utilities/localStorage";
+import { toast, Zoom } from "react-toastify";
 
-const Wishlist = ({ product, removeWishlistProduct }) => {
+const Wishlist = ({ product, removeWishlistProduct, cartProducts }) => {
   const {
     product_id,
     product_title,
@@ -10,6 +11,31 @@ const Wishlist = ({ product, removeWishlistProduct }) => {
     availability,
     description,
   } = product;
+
+
+  // *Handle Add To Cart Button
+  let cartAry = "";
+  const handleAddToCart = () => {
+    cartProducts.map(
+      (cart) => cart.product_id === product_id && (cartAry = cart.product_id)
+    );
+    {
+      cartAry === product_id
+        ? toast.error("Product Already Added Once", {
+              position: "top-center",
+              autoClose: 2000,
+              hideProgressBar: false,
+              closeOnClick: false,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+              transition: Zoom,
+            })
+        : (addToStoredCart(product_id), removeWishlistProduct(product_id));
+    }
+   
+  };
 
   return (
     <div className="flex justify-between lg:items-center border border-slate-200 rounded-lg p-3 mb-3">
@@ -24,9 +50,8 @@ const Wishlist = ({ product, removeWishlistProduct }) => {
           {/* Add To Cart Btn */}
           <button
             disabled={availability === false}
-            onClick={() => (
-              addToStoredCart(product_id), removeWishlistProduct(product_id)
-            )}
+            // )}
+            onClick={() => handleAddToCart()}
             className={`font-semibold px-4 py-2 -ml-2 rounded-xl ${
               availability === false
                 ? "text-[#131313b3] bg-[#1313131a]"
@@ -61,6 +86,7 @@ const Wishlist = ({ product, removeWishlistProduct }) => {
 Wishlist.propTypes = {
   product: PropTypes.object,
   removeWishlistProduct: PropTypes.func,
+  cartProducts: PropTypes.array,
 };
 
 export default Wishlist;

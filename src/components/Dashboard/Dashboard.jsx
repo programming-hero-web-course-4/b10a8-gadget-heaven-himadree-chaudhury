@@ -279,6 +279,7 @@ const Dashboard = () => {
                     key={product.product_id}
                     product={product}
                     removeWishlistProduct={removeWishlistProduct}
+                    cartProducts={cartProducts}
                   ></Wishlist>
                 ))}
               </div>

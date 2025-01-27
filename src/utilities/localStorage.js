@@ -15,6 +15,17 @@ const getCartList = () => {
 const addToStoredCart = (id) => {
   const storedList = getCartList();
   if (storedList.includes(id)) {
+    toast.error("Product Already Added Once", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Zoom,
+    });
     return;
   } else {
     storedList.push(id);
