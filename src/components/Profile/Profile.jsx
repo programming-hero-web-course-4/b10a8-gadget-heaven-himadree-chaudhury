@@ -52,7 +52,7 @@ const Profile = () => {
 
         {/* Login Section */}
         {email === "" && (
-          <div className="flex justify-center items-center flex-col gap-5 p-4">
+          <div className="flex justify-center items-center flex-col gap-5 px-4 py-12">
             <h1 className="text-2xl font-bold">Sign-Up Now</h1>
             <form className="flex justify-center items-center flex-col gap-5">
               <div className="flex justify-center items-end flex-col gap-5">
@@ -95,7 +95,7 @@ const Profile = () => {
 
         {/* Already Signed-Up User Interface */}
         {email !== "" && (
-          <div className=" gap-5 p-4">
+          <div className=" gap-5 px-4 py-12">
             <h1 className="text-4xl font-bold">
               Hello <span className="text-[#9538E2] uppercase">{username}</span>, Welcome
               Back 👋

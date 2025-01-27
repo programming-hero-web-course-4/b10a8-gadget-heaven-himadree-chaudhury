@@ -43,7 +43,7 @@ const Statistics = () => {
             </p>
           </div>
         </div>
-        <div className="py-4">
+        <div className="py-12">
           <div style={{ width: "100%", height: 400 }}>
             <ResponsiveContainer>
               <ComposedChart data={products}>
