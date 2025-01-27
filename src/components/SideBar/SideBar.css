@@ -1,13 +1,13 @@
-.sidebar-btn>button {
-    text-align: left;
-    padding: 0.6rem 1rem  ;
-    background-color: #f0f5f9;
-    border-radius: 1rem;
-    cursor: pointer;
+.sidebar-btn > button {
+  text-align: left;
+  padding: 0.6rem 1rem;
+  background-color: #f0f5f9;
+  border-radius: 1rem;
+  cursor: pointer;
 }
-.sidebar-btn>:hover{
-    background-color: #9538E2;
-    color: white;
-    transition: all;
-    transition-duration: 200ms;
+.sidebar-btn > :hover {
+  background-color: #9538e2;
+  color: white;
+  transition: all;
+  transition-duration: 200ms;
 }

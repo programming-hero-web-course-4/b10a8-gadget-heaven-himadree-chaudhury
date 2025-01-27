@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const Cart = ({ product, removeCartProduct}) => {
+const Cart = ({ product, removeCartProduct }) => {
   const { product_id, product_title, product_image, price, description } =
     product;
 
@@ -39,8 +39,8 @@ const Cart = ({ product, removeCartProduct}) => {
 };
 
 Cart.propTypes = {
-    product: PropTypes.object,
-    removeCartProduct:PropTypes.func
+  product: PropTypes.object,
+  removeCartProduct: PropTypes.func,
 };
 
 export default Cart;

@@ -1,9 +1,9 @@
-.navigation-pane{
-    border-bottom: 4px solid transparent;
+.navigation-pane {
+  border-bottom: 4px solid transparent;
 }
-.navigation-pane:hover{
-    color: #314158;
-    border-bottom: 4px solid #9538E2;
-    transition: all;
-    transition-duration: 200ms;
+.navigation-pane:hover {
+  color: #314158;
+  border-bottom: 4px solid #9538e2;
+  transition: all;
+  transition-duration: 200ms;
 }

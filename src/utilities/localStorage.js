@@ -120,12 +120,12 @@ const getStoredUserName = () => {
 // *Stored validation : Check if the visitor already sign-up
 const addEmailToLocalStorage = (input) => {
   let email = getStoredEmail();
-  if (email === "" && input!== "") {
+  if (email === "" && input !== "") {
     email = input;
     saveEmailToLocalStorage(email);
   }
   if (input === "") {
-    saveEmailToLocalStorage("")
+    saveEmailToLocalStorage("");
   }
 };
 
