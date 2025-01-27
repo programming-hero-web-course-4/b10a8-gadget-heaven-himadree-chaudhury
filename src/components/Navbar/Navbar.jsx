@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -19,16 +19,13 @@ const Navbar = () => {
     };
   };
 
-  // *Handle Active Home Navbar Background
-  const [home, setHome] = useState(true);
-  const activeHome = (state) => {
-    setHome(state);
-  };
+  // *Active Location Path
+  const location = useLocation();
 
   return (
     <div
       className={`max-w-screen-2xl mx-auto p-4 ${
-        home && "bg-[#9538E2] text-white"
+        location.pathname === "/" && "bg-[#9538E2] text-white"
       }`}
     >
       <div className="">
@@ -36,9 +33,8 @@ const Navbar = () => {
           {/* Web Title */}
           <div className="font-bold text-2xl">Gadget Heaven</div>
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex justify-center gap-4 text-lg">
+          <div className="hidden lg:flex justify-center gap-4 text-lg">
             <NavLink
-              onClick={() => activeHome(true)}
               style={navLinkActiveStatus}
               className="navigation-pane"
               to="/"
@@ -47,16 +43,16 @@ const Navbar = () => {
             </NavLink>
 
             <NavLink
-              onClick={() => activeHome(false)}
               style={navLinkActiveStatus}
-              className="navigation-pane"
+              className={`navigation-pane ${
+                location.pathname === "statistics" && "border border-white-800"
+              }`}
               to="/statistics"
             >
               Statistics
             </NavLink>
 
             <NavLink
-              onClick={() => activeHome(false)}
               style={navLinkActiveStatus}
               className="navigation-pane"
               to="/dashboard"
@@ -65,7 +61,6 @@ const Navbar = () => {
             </NavLink>
 
             <NavLink
-              onClick={() => activeHome(false)}
               style={navLinkActiveStatus}
               className="navigation-pane"
               to="/profile"
@@ -74,10 +69,9 @@ const Navbar = () => {
             </NavLink>
           </div>
           {/* Icons */}
-          <div className="hidden md:flex items-center gap-4 text-lg">
+          <div className="hidden lg:flex items-center gap-4 text-lg">
             {/* Cart Icon */}
             <NavLink
-              onClick={() => activeHome(false)}
               style={navLinkActiveStatus}
               className="navigation-pane"
               to="/cart"
@@ -99,7 +93,6 @@ const Navbar = () => {
             </NavLink>
             {/* Wishlist Icon */}
             <NavLink
-              onClick={() => activeHome(false)}
               style={navLinkActiveStatus}
               className="navigation-pane"
               to="/wishlist"
@@ -121,7 +114,7 @@ const Navbar = () => {
             </NavLink>
           </div>
           {/* Navigation Icon For Mobile Version */}
-          <div className="flex md:hidden">
+          <div className="flex lg:hidden">
             <button
               className="flex items-center gap-2"
               onClick={toggleVisibility}
@@ -166,10 +159,9 @@ const Navbar = () => {
       </div>
       {/* Mobile Navigation & Icons*/}
       <div style={{ display: menuToggle === false ? "none" : "block" }}>
-        <div className="flex flex-col gap-2 max-w-screen-2xl mx-auto p-4 md:hidden text-lg">
+        <div className="flex flex-col gap-2 max-w-screen-2xl mx-auto p-4 lg:hidden text-lg">
           {/* Mobile Navigation Links */}
           <NavLink
-            onClick={() => activeHome(true)}
             style={navLinkActiveStatus}
             className="navigation-pane"
             to="/"
@@ -178,7 +170,6 @@ const Navbar = () => {
           </NavLink>
 
           <NavLink
-            onClick={() => activeHome(false)}
             style={navLinkActiveStatus}
             className="navigation-pane"
             to="/statistics"
@@ -187,7 +178,6 @@ const Navbar = () => {
           </NavLink>
 
           <NavLink
-            onClick={() => activeHome(false)}
             style={navLinkActiveStatus}
             className="navigation-pane"
             to="/dashboard"
@@ -196,7 +186,6 @@ const Navbar = () => {
           </NavLink>
 
           <NavLink
-            onClick={() => activeHome(false)}
             style={navLinkActiveStatus}
             className="navigation-pane"
             to="/profile"
@@ -208,7 +197,6 @@ const Navbar = () => {
           <div className="flex items-center gap-4">
             {/* Cart Icon */}
             <NavLink
-              onClick={() => activeHome(false)}
               style={navLinkActiveStatus}
               className="navigation-pane"
               to="/cart"
@@ -230,7 +218,6 @@ const Navbar = () => {
             </NavLink>
             {/* Wishlist Icon */}
             <NavLink
-              onClick={() => activeHome(false)}
               style={navLinkActiveStatus}
               className="navigation-pane"
               to="/wishlist"
