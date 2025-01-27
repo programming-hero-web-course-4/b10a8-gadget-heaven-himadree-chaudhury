@@ -4,7 +4,7 @@ import Product from "../Product/Product";
 import notFound from "../../assets/error.webp"
 
 const Gadget = () => {
-  // *All Players Store And Update Function
+  // *All Products Store And Update Function
   const [products, setProducts] = useState([]);
 
   // *Load All Products Data

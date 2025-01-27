@@ -25,27 +25,27 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "statistics",
+        path: "/statistics",
         element: <Statistics></Statistics>,
       },
       {
-        path: "dashboard",
+        path: "/dashboard",
         element: <Dashboard></Dashboard>,
       },
       {
-        path: "profile",
+        path: "/profile",
         element: <Profile></Profile>,
       },
       {
-        path: "cart",
+        path: "/cart",
         element: <Dashboard></Dashboard>,
       },
       {
-        path: "wishlist",
+        path: "/wishlist",
         element: <Dashboard></Dashboard>,
       },
       {
-        path: "products/:product_id",
+        path: "/products/:product_id",
         element: <ProductDetails></ProductDetails>,
         loader: ()=> fetch('../public/gadgetProducts.json')
       },

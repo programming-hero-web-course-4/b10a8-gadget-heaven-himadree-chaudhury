@@ -2,7 +2,7 @@
   {
     "product_id": "P1001",
     "product_title": "Galaxy Tech Laptop X15",
-    "product_image": "../src/assets/Galaxy Tech Laptop X15.jpg",
+    "product_image": "https://i.imgur.com/zEsO5Cy.jpg",
     "category": "Laptop",
     "price": 1200,
     "description": "A sleek and powerful laptop with cutting-edge technology.",
@@ -23,7 +23,7 @@
   {
     "product_id": "P1002",
     "product_title": "ASUS ROG Zephyrus G16",
-    "product_image": "../src/assets/ASUS ROG Zephyrus G16.jpg",
+    "product_image": "https://i.imgur.com/9Dqc5yK.jpg",
     "category": "Laptop",
     "price": 1699,
     "description": "High-performance gaming laptop with advanced cooling and stunning visuals.",
@@ -45,7 +45,7 @@
   {
     "product_id": "P1003",
     "product_title": "AirPods Pro 3",
-    "product_image": "../src/assets/AirPods Pro 3.jpg",
+    "product_image": "https://i.imgur.com/SYg3VnZ.jpg",
     "category": "Accessories",
     "price": 249,
     "description": "Noise-cancelling wireless earbuds with improved sound quality.",
@@ -65,7 +65,7 @@
   {
     "product_id": "P1004",
     "product_title": "Galaxy Watch 6",
-    "product_image": "../src/assets/Galaxy Watch 6.jpg",
+    "product_image": "https://i.imgur.com/LOzDDcB.jpg",
     "category": "Smartwatch",
     "price": 399,
     "description": "A stylish smartwatch with health tracking features.",
@@ -86,7 +86,7 @@
   {
     "product_id": "P1005",
     "product_title": "Xiaomi Mi 13 Ultra",
-    "product_image": "../src/assets/Xiaomi Mi 13 Ultra.jpg",
+    "product_image": "https://i.imgur.com/ksJS1ox.jpg",
     "category": "Smartphone",
     "price": 899,
     "description": "Flagship phone with exceptional camera and battery performance.",
@@ -107,7 +107,7 @@
   {
     "product_id": "P1006",
     "product_title": "Logitech MX Master 4",
-    "product_image": "../src/assets/Logitech MX Master 4.webp",
+    "product_image": "https://i.imgur.com/a43KVJT.jpg",
     "category": "Accessories",
     "price": 119,
     "description": "Premium wireless mouse with ergonomic design.",
@@ -123,7 +123,7 @@
   {
     "product_id": "P1007",
     "product_title": "Lenovo Yoga Slim 7",
-    "product_image": "../src/assets/Lenovo Yoga Slim 7.webp",
+    "product_image": "https://i.imgur.com/JqpR1k8.jpg",
     "category": "Laptop",
     "price": 1100,
     "description": "A lightweight and portable laptop with premium features.",
@@ -144,7 +144,7 @@
   {
     "product_id": "P1008",
     "product_title": "Sony WH-1000XM5",
-    "product_image": "../src/assets/Sony WH-1000XM5.jpg",
+    "product_image": "https://i.imgur.com/ITfmweI.jpg",
     "category": "Accessories",
     "price": 349,
     "description": "Industry-leading noise-cancelling headphones.",
@@ -160,7 +160,7 @@
   {
     "product_id": "P1009",
     "product_title": "OnePlus Nord CE 3 Lite",
-    "product_image": "../src/assets/OnePlus Nord CE 3 Lite.jpg",
+    "product_image": "https://i.imgur.com/pLqhpMV.jpg",
     "category": "Smartphone",
     "price": 299,
     "description": "Affordable phone with excellent performance.",
@@ -181,7 +181,7 @@
   {
     "product_id": "P1010",
     "product_title": "ASUS ZenBook Pro 14",
-    "product_image": "../src/assets/ASUS ZenBook Pro 14 OLED.webp",
+    "product_image": "https://i.imgur.com/lAfuH8b.jpg",
     "category": "Laptop",
     "price": 1499,
     "description": "A premium laptop with a stunning OLED display for creative professionals.",
@@ -203,7 +203,7 @@
   {
     "product_id": "P1011",
     "product_title": "Dell XPS 13 Plus",
-    "product_image": "../src/assets/Dell XPS 13 Plus.jpg",
+    "product_image": "https://i.imgur.com/lozvXD9.jpg",
     "category": "Laptop",
     "price": 1400,
     "description": "A high-performance ultrabook with stunning visuals.",
@@ -224,7 +224,7 @@
   {
     "product_id": "P1012",
     "product_title": "Google Pixel 8",
-    "product_image": "../src/assets/Google Pixel 8.jpg",
+    "product_image": "https://i.imgur.com/rNO5Khh.jpg",
     "category": "Smartphone",
     "price": 699,
     "description": "Google's latest smartphone with AI features.",
@@ -245,7 +245,7 @@
   {
     "product_id": "P1013",
     "product_title": "Samsung Tab S9 Ultra",
-    "product_image": "../src/assets/Samsung Tab S9 Ultra.jpg",
+    "product_image": "https://i.imgur.com/pUUK4Zw.jpg",
     "category": "Tablet",
     "price": 1199,
     "description": "A premium tablet with a massive display.",
@@ -266,7 +266,7 @@
   {
     "product_id": "P1014",
     "product_title": "Bose QuietComfort Ultra",
-    "product_image": "../src/assets/Bose QuietComfort Ultra.jpg",
+    "product_image": "https://i.imgur.com/8oN1BPM.jpg",
     "category": "Accessories",
     "price": 279,
     "description": "Top-notch noise-cancelling headphones with superb audio.",
@@ -286,7 +286,7 @@
   {
     "product_id": "P1015",
     "product_title": "Microsoft Surface Pro 9",
-    "product_image": "../src/assets/Microsoft Surface Pro 9.webp",
+    "product_image": "https://i.imgur.com/MzxQCG7.jpg",
     "category": "Tablet",
     "price": 999,
     "description": "A versatile 2-in-1 device for work and play.",
@@ -307,7 +307,7 @@
   {
     "product_id": "P1016",
     "product_title": "ASUS ROG Phone 7",
-    "product_image": "../src/assets/ASUS ROG Phone 7.jpg",
+    "product_image": "https://i.imgur.com/PU7DXF5.jpg",
     "category": "Smartphone",
     "price": 979,
     "description": "A gaming phone with top-notch performance and cooling.",
@@ -328,7 +328,7 @@
   {
     "product_id": "P1017",
     "product_title": "HP Spectre x360",
-    "product_image": "../src/assets/HP Spectre x360.jpg",
+    "product_image": "https://i.imgur.com/n1jJ5s7.jpg",
     "category": "Laptop",
     "price": 1350,
     "description": "A convertible laptop with exceptional style and performance.",
@@ -349,7 +349,7 @@
   {
     "product_id": "P1018",
     "product_title": "Garmin Forerunner 965",
-    "product_image": "../src/assets/Garmin Forerunner 965.webp",
+    "product_image": "https://i.imgur.com/wdL1KDC.jpg",
     "category": "Smartwatch",
     "price": 599,
     "description": "A premium smartwatch for fitness enthusiasts.",
@@ -370,7 +370,7 @@
   {
     "product_id": "P1019",
     "product_title": "Sony Xperia 1 V",
-    "product_image": "../src/assets/Sony Xperia 1 V.webp",
+    "product_image": "https://i.imgur.com/8Sfp8ct.jpg",
     "category": "Smartphone",
     "price": 1099,
     "description": "A phone designed for photographers and videographers.",
@@ -391,7 +391,7 @@
   {
     "product_id": "P1020",
     "product_title": "JBL Charge 5",
-    "product_image": "../src/assets/JBL Charge 5.jpg",
+    "product_image": "https://i.imgur.com/biW7oee.jpg",
     "category": "Accessories",
     "price": 179,
     "description": "A portable Bluetooth speaker with deep bass and waterproof design.",

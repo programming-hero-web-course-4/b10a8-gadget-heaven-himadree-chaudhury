@@ -1,4 +1,4 @@
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import "./ProductDetail.css";
 import { useState } from "react";
 import { addToStoredCart, addToWishedCart } from "../../utilities/localStorage";
@@ -212,13 +212,16 @@ const ProductDetails = () => {
                 </div>
                 <div className="flex items-center gap-4">
                   {/* Add To Cart Btn */}
-                  <Link
+                  <button
+                    disabled={availability === false}
                     onClick={
                       availability === true &&
                       (() => addToStoredCart(product_id))
                     }
-                    className={`flex items-center gap-2 bg-[#9538E2] text-white font-semibold px-4 py-2 rounded-xl hover:bg-white hover:text-black border border-[#9538E2] duration-200 transition-all ${
-                      availability === false && "cursor-not-allowed"
+                    className={`flex items-center gap-2 font-bold px-4 py-2 rounded-xl ${
+                      availability === false
+                        ? "text-[#131313b3] bg-[#1313131a]"
+                        : "bg-[#9538E2] text-white hover:bg-white hover:text-black border border-[#9538E2] duration-200 transition-all cursor-pointer"
                     }`}
                   >
                     Add To Cart
@@ -236,9 +239,10 @@ const ProductDetails = () => {
                         d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
                       />
                     </svg>
-                  </Link>
+                  </button>
                   {/* Add To Wishlist Btn */}
-                  <Link
+                  <button
+                    disabled={clicked === true}
                     id="add-to-wishlist"
                     onClick={() => {
                       handleWishlist(true);
@@ -247,7 +251,9 @@ const ProductDetails = () => {
                     }}
                     className={`p-2 border border-slate-200 rounded-full  duration-200 transition-all ${
                       isClicked && "bg-[#9538E2] text-white"
-                    } ${clicked && "cursor-not-allowed "}`}
+                    }
+                    ${clicked === false ? "cursor-pointer" : ""}
+                      `}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -263,7 +269,7 @@ const ProductDetails = () => {
                         d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
                       />
                     </svg>
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
