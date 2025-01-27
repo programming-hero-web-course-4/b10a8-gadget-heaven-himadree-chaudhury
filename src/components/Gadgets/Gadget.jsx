@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import SideBar from "../SideBar/SideBar";
 import Product from "../Product/Product";
+import notFound from "../../assets/error.webp"
 
 const Gadget = () => {
   // *All Players Store And Update Function
@@ -34,8 +35,8 @@ const Gadget = () => {
 
   return (
     <div className="grid grid-cols-7 gap-5 py-8">
-          <div className="col-span-1">
-              {/* Sidebar Category */}
+      <div className="col-span-1">
+        {/* Sidebar Category */}
         <SideBar
           handleCategory={handleCategory}
           handleAllProducts={handleAllProducts}
@@ -43,15 +44,31 @@ const Gadget = () => {
       </div>
       <div className="col-span-6">
         <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {viewCategory === "all"
-            ? //   *All Products
-              products.map((product) => (
-                <Product key={product.product_id} product={product}></Product>
-              ))
-            : // *Categorized Products
-              categorizedProducts.map((product) => (
-                <Product key={product.product_id} product={product}></Product>
-              ))}
+          {viewCategory === "all" ? (
+            //   *All Products
+            products.map((product) => (
+              <Product key={product.product_id} product={product}></Product>
+            ))
+          ) : // *Categorized Products
+          categorizedProducts.length >= 1 ? (
+            categorizedProducts.map((product) => (
+              <Product key={product.product_id} product={product}></Product>
+            ))
+          ) : (
+            // *Empty Product Category
+            <div className="place-items-center border border-slate-200 rounded-2xl md:col-span-2 lg:col-span-3">
+                  <div className=" p-10 md:p-20 flex flex-col justify-center items-center space-y-3">
+                    <img src={notFound} alt="" />
+                <h1 className="font-bold text-3xl font-secondary text-center">
+                  No Gadgets Available
+                </h1>
+                <p className="lg:text-center font-primary">
+                  Currently, no gadgets is available. Please check back soon
+                  or contact us for assistance.
+                </p>
+              </div>
+            </div>
+          )}
         </section>
       </div>
     </div>
