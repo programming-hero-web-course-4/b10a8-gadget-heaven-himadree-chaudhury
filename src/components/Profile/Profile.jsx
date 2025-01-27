@@ -57,7 +57,7 @@ const Profile = () => {
             <form className="flex justify-center items-center flex-col gap-5">
               <div className="flex justify-center items-end flex-col gap-5">
                 <div className="flex justify-center items-center gap-5 font-semibold text-xl">
-                  <h1>Username : </h1>
+                  <h1>Username: </h1>
                   <input
                     required
                     type="text"
@@ -68,7 +68,7 @@ const Profile = () => {
                   />
                 </div>
                 <div className="flex justify-center items-center gap-5 font-semibold text-xl">
-                  <h1>Email : </h1>
+                  <h1>Email: </h1>
                   <input
                     required
                     type="email"
