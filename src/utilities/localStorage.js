@@ -100,6 +100,51 @@ const removeFromStoredWishlist = (id) => {
   }
 };
 
+// *Profile Local Storage
+// * Get local storage data
+const getStoredEmail = () => {
+  const storedEmail = localStorage.getItem("email");
+  if (storedEmail) {
+    return JSON.parse(storedEmail);
+  }
+  return "";
+};
+const getStoredUserName = () => {
+  const storedUserName = localStorage.getItem("username");
+  if (storedUserName) {
+    return JSON.parse(storedUserName);
+  }
+  return "";
+};
+
+// *Stored validation : Check if the visitor already sign-up
+const addEmailToLocalStorage = (input) => {
+  let email = getStoredEmail();
+  if (email === "") {
+    email = input;
+    saveEmailToLocalStorage(email);
+  }
+};
+
+const addUserNameToLocalStorage = (input) => {
+  let userName = getStoredUserName();
+  if (userName === "") {
+    userName = input;
+    saveUserNameToLocalStorage(userName);
+  }
+};
+
+// *Add email & username to local storage if the user didn't sign-up
+const saveEmailToLocalStorage = (email) => {
+  const emailStringify = JSON.stringify(email);
+  localStorage.setItem("email", emailStringify);
+};
+
+const saveUserNameToLocalStorage = (username) => {
+  const usernameStringify = JSON.stringify(username);
+  localStorage.setItem("username", usernameStringify);
+};
+
 export {
   addToStoredCart,
   addToWishedCart,
@@ -108,4 +153,8 @@ export {
   removeAllCartProducts,
   getWishList,
   removeFromStoredWishlist,
+  getStoredEmail,
+  addEmailToLocalStorage,
+  getStoredUserName,
+  addUserNameToLocalStorage,
 };

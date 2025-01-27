@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -122,7 +122,7 @@ const Navbar = () => {
           </div>
           {/* Navigation Icon For Mobile Version */}
           <div className="flex md:hidden">
-            <Link
+            <button
               className="flex items-center gap-2"
               onClick={toggleVisibility}
             >
@@ -160,7 +160,7 @@ const Navbar = () => {
                   />
                 </svg>
               )}
-            </Link>
+            </button>
           </div>
         </nav>
       </div>

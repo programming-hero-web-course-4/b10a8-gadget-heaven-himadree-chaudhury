@@ -73,8 +73,6 @@ const Dashboard = () => {
   const cartCostAry = cartProducts.map((product) => product.price);
   let cartTotal = cartCostAry.reduce((a, b) => a + b, 0);
 
-  console.log(parseInt(cartTotal));
-
   // *Handle Price Sort
   const handlePriceSort = () => {
     const sortedCart = [...cartProducts].sort((a, b) => b.price - a.price);
@@ -130,7 +128,7 @@ const Dashboard = () => {
     <div>
       {/* React Helmet */}
       <Helmet>
-        <title>Gadget Heaven | Dashboard</title>
+        <title>GADGET HEAVEN | Dashboard</title>
       </Helmet>
 
       <section className="max-w-screen-2xl p-4 mx-auto">
@@ -182,9 +180,9 @@ const Dashboard = () => {
         <div>
           {view === "cart" && (
             <div className="py-8">
-              <div className="flex justify-between items-center py-4">
+              <div className="flex flex-col gap-5 lg:flex-row justify-between items-center py-4">
                 <h1 className="text-2xl font-bold">Cart</h1>
-                <div className="flex justify-center items-center gap-5">
+                <div className="flex flex-col md:flex-row justify-center items-center gap-5">
                   <div className="text-2xl font-bold">
                     Total Cost : {cartTotal} $
                   </div>

@@ -7,7 +7,7 @@ const Home = () => {
     <div className="max-w-screen-2xl mx-auto">
       {/* React Helmet */}
       <Helmet>
-        <title>Gadget Heaven | Home</title>
+        <title>GADGET HEAVEN | Home</title>
       </Helmet>
 
       <header className="text-center relative">
@@ -28,7 +28,7 @@ const Home = () => {
           </div>
         </div>
         {/* Banner */}
-        <div className="absolute -bottom-28 md:-bottom-32 lg:-bottom-72 xl:-bottom-80">
+        <div className="absolute -bottom-36 md:-bottom-32 lg:-bottom-72 xl:-bottom-80">
           <div className="border border-slate-300 rounded-2xl bg-[#ffffff4d] w-11/12 md:w-2/4 lg:w-4/5 xl:w-3/5 mx-auto ">
             <img className="rounded-3xl p-3" src={banner} alt="" />
           </div>

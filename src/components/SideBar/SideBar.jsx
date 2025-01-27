@@ -1,6 +1,5 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-
 import "./SideBar.css";
 
 const SideBar = ({ handleCategory, handleAllProducts }) => {
@@ -8,7 +7,7 @@ const SideBar = ({ handleCategory, handleAllProducts }) => {
   const [view, setView] = useState("all");
 
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-1 gap-5 border border-slate-200 py-4 px-2 text-left rounded-2xl">
+    <div className="grid grid-cols-2 lg:grid-cols-1 gap-5 border border-slate-200 py-4 px-2 text-left rounded-2xl sidebar-btn">
       <button
         onClick={() => {
           setView("all");

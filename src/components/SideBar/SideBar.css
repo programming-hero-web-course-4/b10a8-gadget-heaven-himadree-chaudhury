@@ -1,11 +1,11 @@
-button {
+.sidebar-btn>button {
     text-align: left;
     padding: 0.6rem 1rem  ;
     background-color: #f0f5f9;
     border-radius: 1rem;
     cursor: pointer;
 }
-button:hover{
+.sidebar-btn>:hover{
     background-color: #9538E2;
     color: white;
     transition: all;

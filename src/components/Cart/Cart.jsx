@@ -5,8 +5,8 @@ const Cart = ({ product, removeCartProduct}) => {
     product;
 
   return (
-    <div className="flex justify-between items-center border border-slate-200 rounded-lg p-3 mb-3">
-      <div className="flex gap-5 items-center">
+    <div className="flex justify-between lg:items-center border border-slate-200 rounded-lg p-3 mb-3">
+      <div className="flex flex-col md:flex-row gap-5 items-center">
         <div className="w-40 overflow-hidden object-cover aspect-square rounded-xl border border-slate-200">
           <img src={product_image} alt={product_title} />
         </div>
