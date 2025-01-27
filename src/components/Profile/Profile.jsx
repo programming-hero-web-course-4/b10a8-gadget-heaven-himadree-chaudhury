@@ -97,7 +97,7 @@ const Profile = () => {
         {email !== "" && (
           <div className=" gap-5 p-4">
             <h1 className="text-4xl font-bold">
-              Hello <span className="text-[#9538E2]">{username}</span>, Welcome
+              Hello <span className="text-[#9538E2] uppercase">{username}</span>, Welcome
               Back 👋
             </h1>
             <form className="my-5">
