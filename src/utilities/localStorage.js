@@ -1,3 +1,5 @@
+import { toast, Zoom } from "react-toastify";
+
 // *Handle Cart Local Storage
 
 const getCartList = () => {
@@ -18,6 +20,19 @@ const addToStoredCart = (id) => {
     storedList.push(id);
     const storedCartData = JSON.stringify(storedList);
     localStorage.setItem("cart", storedCartData);
+
+    // *Product Added To Cart Toast
+    toast.success("🛒 Product Added To Cart", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Zoom,
+    });
   }
 };
 
@@ -34,8 +49,8 @@ const removeFromStoredCart = (id) => {
 };
 
 const removeAllCartProducts = () => {
-  localStorage.removeItem('cart');
-}
+  localStorage.removeItem("cart");
+};
 
 // *Handle Wishlist Local Storage
 
@@ -57,6 +72,19 @@ const addToWishedCart = (id) => {
     storedWish.push(id);
     const storedWishData = JSON.stringify(storedWish);
     localStorage.setItem("wishlist", storedWishData);
+
+    // *Product Added To Wishlist Toast
+    toast.success("📃 Product Added To Wishlist", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Zoom,
+    });
   }
 };
 

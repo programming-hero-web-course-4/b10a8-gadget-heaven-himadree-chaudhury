@@ -240,7 +240,7 @@ const Dashboard = () => {
                           <hr className="border-slate-300" />
                           <div className="space-y-1 text-slate-700">
                             <p>Thanks for purchasing.</p>
-                            <h2>Total : {cartTotal}</h2>
+                            <h2>Total : {cartTotal} $</h2>
                           </div>
                           <Link
                             onClick={handleCloseModal}

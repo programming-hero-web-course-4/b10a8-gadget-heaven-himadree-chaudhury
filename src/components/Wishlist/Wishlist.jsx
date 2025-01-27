@@ -3,13 +3,19 @@ import { Link } from "react-router-dom";
 import { addToStoredCart } from "../../utilities/localStorage";
 
 const Wishlist = ({ product, removeWishlistProduct }) => {
-  const { product_id, product_title, product_image, price, description } =
-    product;
+  const {
+    product_id,
+    product_title,
+    product_image,
+    price,
+    availability,
+    description,
+  } = product;
 
   return (
     <div className="flex justify-between items-center border border-slate-200 rounded-lg p-3 mb-3">
       <div className="flex gap-5 items-center">
-        <div className="w-40 h-32 overflow-hidden object-cover aspect-square rounded-xl border border-slate-200">
+        <div className="w-40 overflow-hidden object-cover aspect-square rounded-xl border border-slate-200">
           <img src={product_image} alt={product_title} />
         </div>
         <div className="space-y-2">
@@ -18,11 +24,14 @@ const Wishlist = ({ product, removeWishlistProduct }) => {
           <h2 className="font-semibold">Price : {price} $</h2>
           {/* Add To Cart Btn */}
           <Link
-            onClick={() => addToStoredCart(product_id)}
-            className="bg-[#9538E2] text-white font-semibold px-4 py-2 -ml-2 rounded-xl"
+            onClick={
+              availability === true && (() => addToStoredCart(product_id))
+            }
+            className={`bg-[#9538E2] text-white font-semibold px-4 py-2 -ml-2 rounded-xl ${
+              availability === false && "cursor-not-allowed"
+            }`}
           >
             Add To Cart
-           
           </Link>
         </div>
       </div>
@@ -51,6 +60,5 @@ Wishlist.propTypes = {
   product: PropTypes.object,
   removeWishlistProduct: PropTypes.func,
 };
-
 
 export default Wishlist;

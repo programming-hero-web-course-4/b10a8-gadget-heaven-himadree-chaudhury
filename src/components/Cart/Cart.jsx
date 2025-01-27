@@ -7,10 +7,10 @@ const Cart = ({ product, removeCartProduct}) => {
   return (
     <div className="flex justify-between items-center border border-slate-200 rounded-lg p-3 mb-3">
       <div className="flex gap-5 items-center">
-        <div className="w-40 h-32 overflow-hidden object-cover aspect-square rounded-xl border border-slate-200">
+        <div className="w-40 overflow-hidden object-cover aspect-square rounded-xl border border-slate-200">
           <img src={product_image} alt={product_title} />
         </div>
-        <div>
+        <div className="space-y-3">
           <h1 className="font-bold text-xl">{product_title}</h1>
           <p>{description}</p>
           <h2 className="font-semibold">Price : {price} $</h2>

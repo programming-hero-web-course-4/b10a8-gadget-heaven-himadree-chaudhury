@@ -30,7 +30,6 @@ const ProductDetails = () => {
   // *Handle Wishlist
   const handleWishlist = (state) => {
     setIsClicked(state);
-
   };
   // *Custom Rating Functionality
   // *Store Custom Rating
@@ -42,10 +41,10 @@ const ProductDetails = () => {
   };
 
   // *Wishlist Button Disability
-const [clicked,setClicked] =useState(false)
+  const [clicked, setClicked] = useState(false);
 
   const handleClick = (state) => {
-    setClicked(state)
+    setClicked(state);
   };
 
   return (
@@ -67,11 +66,11 @@ const [clicked,setClicked] =useState(false)
           </div>
         </div>
         {/* Product Details Section */}
-        <div className="absolute top-52">
-          <div className="w-10/12 md:w-11/12  mx-auto bg-white border border-slate-200 rounded-2xl">
+        <div className="absolute top-52 w-full left-1/2 transform -translate-x-1/2">
+          <div className="w-10/12 md:w-11/12 mx-auto bg-white border border-slate-200 rounded-2xl">
             <div className="grid md:grid-cols-5 gap-5 p-5 items-center ">
               {/* Product Image */}
-              <div className="col-span-2 ">
+              <div className="col-span-2 place-items-center">
                 <img
                   className="object-cover"
                   src={product_image}
@@ -214,8 +213,13 @@ const [clicked,setClicked] =useState(false)
                 <div className="flex items-center gap-4">
                   {/* Add To Cart Btn */}
                   <Link
-                    onClick={() => addToStoredCart(product_id)}
-                    className="flex items-center gap-2 bg-[#9538E2] text-white font-semibold px-4 py-2 rounded-xl hover:bg-white hover:text-black border border-[#9538E2] duration-200 transition-all"
+                    onClick={
+                      availability === true &&
+                      (() => addToStoredCart(product_id))
+                    }
+                    className={`flex items-center gap-2 bg-[#9538E2] text-white font-semibold px-4 py-2 rounded-xl hover:bg-white hover:text-black border border-[#9538E2] duration-200 transition-all ${
+                      availability === false && "cursor-not-allowed"
+                    }`}
                   >
                     Add To Cart
                     <svg
