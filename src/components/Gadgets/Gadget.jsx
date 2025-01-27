@@ -34,15 +34,15 @@ const Gadget = () => {
   };
 
   return (
-    <div className="grid grid-cols-7 gap-5 py-8">
-      <div className="col-span-1">
+    <div className="grid lg:grid-cols-7 gap-5 py-8">
+      <div className="lg:col-span-1">
         {/* Sidebar Category */}
         <SideBar
           handleCategory={handleCategory}
           handleAllProducts={handleAllProducts}
         ></SideBar>
       </div>
-      <div className="col-span-6">
+      <div className="lg:col-span-6">
         <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {viewCategory === "all" ? (
             //   *All Products
