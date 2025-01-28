@@ -168,9 +168,13 @@ const Dashboard = () => {
                   }}
                   style={{
                     backgroundColor:
-                      view === "cart" && activeSection === "cart" && "white",
+                      ((view === "cart" && activeSection === "cart") ||
+                        (view === "wishlist" && activeSection === "cart")) &&
+                      "white",
                     color:
-                      view === "cart" && activeSection === "cart" && "#9538E2",
+                      ((view === "cart" && activeSection === "cart") ||
+                        (view === "wishlist" && activeSection === "cart")) &&
+                      "#9538E2",
                   }}
                   className="px-12 py-2 rounded-2xl border border-white font-bold text-lg transition-all duration-200 cursor-pointer"
                 >
@@ -184,10 +188,12 @@ const Dashboard = () => {
                   }}
                   style={{
                     backgroundColor:
-                      (view === "wishlist" || activeSection ==="wishlist") &&
+                      ((view === "wishlist" && activeSection === "wishlist") ||
+                        (view === "cart" && activeSection === "wishlist")) &&
                       "white",
                     color:
-                      (view === "wishlist" || activeSection ==="wishlist") &&
+                      ((view === "wishlist" && activeSection === "wishlist") ||
+                        (view === "cart" && activeSection === "wishlist")) &&
                       "#9538E2",
                   }}
                   className="px-12 py-2 rounded-2xl border border-white font-bold text-lg  transition-all duration-200 cursor-pointer"
