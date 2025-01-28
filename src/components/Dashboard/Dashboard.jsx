@@ -15,19 +15,9 @@ import { Helmet } from "react-helmet-async";
 const Dashboard = () => {
   // *Show Active Selection Button
   const [view, setView] = useState("cart");
-  // const handleView = (view) => {
-  //   setView(view);
-  // };
 
   // *All Players Store And Update Function
   const [products, setProducts] = useState([]);
-
-  // *Load All Products Data
-  // useEffect(() => {
-  //   fetch("gadgetProducts.json")
-  //     .then((res) => res.json())
-  //     .then((data) => setProducts(data));
-  // }, []);
 
   // *Store Products in Cart
   const [cartProducts, setCartProducts] = useState([]);
