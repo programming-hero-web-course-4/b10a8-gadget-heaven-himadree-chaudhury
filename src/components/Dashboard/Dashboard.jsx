@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import {
   getCartList,
   getWishList,
@@ -10,13 +11,12 @@ import {
 import modalPic from "../../assets/Group.png";
 import Cart from "../Cart/Cart";
 import Wishlist from "../Wishlist/Wishlist";
-import { Helmet } from "react-helmet-async";
 
 const Dashboard = () => {
   // *Show Active Selection Button
   const [view, setView] = useState("cart");
 
-  // *All Players Store And Update Function
+  // *All Products Store And Update Function
   const [products, setProducts] = useState([]);
 
   // *Store Products in Cart
@@ -69,7 +69,7 @@ const Dashboard = () => {
   const cartCostAry = cartProducts.map((product) => product.price);
   let cartTotal = cartCostAry.reduce((a, b) => a + b, 0);
 
-  // *Handle Price Sort
+  // *Handle Cart Price Sort
   const handlePriceSort = () => {
     const sortedCart = [...cartProducts].sort((a, b) => b.price - a.price);
     setCartProducts(sortedCart);
@@ -137,7 +137,7 @@ const Dashboard = () => {
       </Helmet>
 
       <section className="max-w-screen-2xl p-4 mx-auto">
-        {/* Products Details Banner */}
+        {/* Dashboard Banner */}
         <div className="">
           <div className="text-center">
             <div className="bg-[#9538E2] text-white rounded-2xl space-y-5 pb-20 pt-12">
@@ -150,6 +150,7 @@ const Dashboard = () => {
                 have it all!
               </p>
               <div className="flex justify-center gap-5">
+                {/* Cart Button */}
                 <button
                   onClick={() => {
                     handleCartProducts();
@@ -170,6 +171,7 @@ const Dashboard = () => {
                 >
                   Cart
                 </button>
+                {/* Wishlist Button */}
                 <button
                   onClick={() => {
                     handleWishlistProducts();
@@ -195,14 +197,17 @@ const Dashboard = () => {
           </div>
         </div>
         <div>
+          {/* Cart Section */}
           {activeSection === "cart" && (
             <div className="py-8">
               <div className="flex flex-col gap-5 lg:flex-row justify-between items-center py-4">
                 <h1 className="text-2xl font-bold">Cart</h1>
                 <div className="flex flex-col md:flex-row justify-center items-center gap-5">
+                  {/* Cart Total Cost */}
                   <div className="text-2xl font-bold">
                     Total Cost : {cartTotal} $
                   </div>
+                  {/* Cart Sort Button */}
                   <button
                     onClick={() => handlePriceSort()}
                     className="flex gap-1 justify-center items-center border px-4 py-2 rounded-2xl font-semibold border-[#9538E2] text-[#9538E2] cursor-pointer"
@@ -223,6 +228,7 @@ const Dashboard = () => {
                       />
                     </svg>
                   </button>
+                  {/* Purchase Button */}
                   <button
                     disabled={cartProducts.length === 0 || cartTotal === 0}
                     onClick={() => handlePurchase()}
@@ -237,7 +243,7 @@ const Dashboard = () => {
                   {/* 
                   // label======================= Modal Section Starts ======================= label //
                   */}
-
+                  {/* Modal */}
                   {isModalOpen && (
                     <div className="fixed inset-0 flex items-center justify-center text-center ">
                       <div className="border border-slate-200 p-2 rounded-2xl bg-white">
@@ -263,12 +269,12 @@ const Dashboard = () => {
                       </div>
                     </div>
                   )}
-
                   {/* 
                   // label======================= Modal Section Ends ======================= label //
                   */}
                 </div>
               </div>
+              {/* Cart Products Display */}
               <div>
                 {cartProducts.map((product) => (
                   <Cart
@@ -286,6 +292,7 @@ const Dashboard = () => {
               <div className="flex justify-between items-center py-4">
                 <h1 className="text-2xl font-bold">Wishlist</h1>
               </div>
+              {/* Wishlist Products Display */}
               <div>
                 {wishlistProducts.map((product) => (
                   <Wishlist

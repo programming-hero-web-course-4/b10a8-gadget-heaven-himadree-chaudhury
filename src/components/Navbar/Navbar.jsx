@@ -11,7 +11,7 @@ const Navbar = () => {
     setMenuToggle(!menuToggle);
   };
 
-  // *Indicate Active route in the Navbar
+  // *Indicate Active Route In The Navbar
   const navLinkActiveStatus = ({ isActive }) => {
     return {
       fontWeight: isActive ? "bold" : "normal",
@@ -22,7 +22,7 @@ const Navbar = () => {
   // *Active Location Path
   const location = useLocation();
 
-  // *Navigation
+  // *Navigate Directly From Cart & Wishlist Button
   const navigate = useNavigate();
 
   const handleCartClick = () => {
@@ -114,7 +114,7 @@ const Navbar = () => {
               </svg>
             </button>
           </div>
-          {/* Navigation Icon For Mobile Version */}
+          {/* Menu Button For Mobile Device */}
           <div className="flex lg:hidden">
             <button
               className="flex items-center gap-2"

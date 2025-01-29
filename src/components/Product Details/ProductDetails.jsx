@@ -22,9 +22,10 @@ const ProductDetails = () => {
     Specification,
     availability,
     rating,
+    reviews,
   } = product;
 
-  // *Wishlist Btn Functionality
+  // *Wishlist Button Functionality
   const [isClicked, setIsClicked] = useState(false);
 
   // *Handle Wishlist
@@ -49,8 +50,8 @@ const ProductDetails = () => {
 
   return (
     <div>
-      <section className="max-w-screen-2xl mx-auto relative mb-80 md:mb-40 pb-80">
-        {/* Products Details Banner */}
+      <section className="max-w-screen-2xl mx-auto relative mb-96 md:mb-40 pb-96">
+        {/* Product Details Banner */}
         <div className="">
           <div className="p-4 text-center bg-[#9538E2] text-white rounded-b-2xl ">
             <div className="space-y-5 pb-32 pt-12">
@@ -211,7 +212,7 @@ const ProductDetails = () => {
                   </span>
                 </div>
                 <div className="flex items-center gap-4">
-                  {/* Add To Cart Btn */}
+                  {/* Add To Cart Button Upon Availability */}
                   <button
                     disabled={availability === false}
                     onClick={
@@ -240,7 +241,7 @@ const ProductDetails = () => {
                       />
                     </svg>
                   </button>
-                  {/* Add To Wishlist Btn */}
+                  {/* Add To Wishlist Button */}
                   <button
                     disabled={clicked === true}
                     id="add-to-wishlist"
@@ -270,6 +271,15 @@ const ProductDetails = () => {
                       />
                     </svg>
                   </button>
+                </div>
+                {/* Product Review */}
+                <div>
+                  <h2 className="font-bold text-xl">Reviews :</h2>
+                  <p className="text-slate-700">
+                    {reviews.map((review, idx) => (
+                      <p key={idx}>{review} </p>
+                    ))}
+                  </p>
                 </div>
               </div>
             </div>

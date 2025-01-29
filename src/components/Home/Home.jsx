@@ -11,9 +11,9 @@ const Home = () => {
       </Helmet>
 
       <header className="text-center relative">
-        {/* Hero Section */}
+        {/* Welcome Section */}
         <div className="p-4 bg-[#9538E2] rounded-b-2xl">
-          <div className=" text-white space-y-5 pb-32 md:pb-40 lg:pb-80 pt-12">
+          <div className=" text-white space-y-5 pb-32 md:pb-40 lg:pb-64 xl:pb-80 pt-12">
             <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold">
               Upgrade Your Tech Accessorize with Gadget Heaven Accessories
             </h1>
@@ -27,14 +27,13 @@ const Home = () => {
             </button>
           </div>
         </div>
-        {/* Banner */}
+        {/* Banner Image */}
         <div className="absolute -bottom-36 md:-bottom-32 lg:-bottom-72 xl:-bottom-80">
           <div className="border border-slate-300 rounded-2xl bg-[#ffffff4d] w-11/12 md:w-2/4 lg:w-4/5 xl:w-3/5 mx-auto ">
             <img className="rounded-3xl p-3" src={banner} alt="" />
           </div>
         </div>
       </header>
-
       {/* Featured Products */}
       <section className="p-4">
         <div className="pt-44 md:pt-64 lg:pt-80">

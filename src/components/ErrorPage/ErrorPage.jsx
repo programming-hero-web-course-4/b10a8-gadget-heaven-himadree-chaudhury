@@ -10,6 +10,7 @@ const ErrorPage = () => {
         <p className="my-4 pb-4 text-lg text-gray-600">
           Oops! The page you are looking for does not exist.
         </p>
+        {/* Navigate To Home Button */}
         <Link
           to="/"
           onClick={() => navigate("/")}

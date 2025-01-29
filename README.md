@@ -1,6 +1,6 @@
 # GadgetHeaven✨
 
-Your go-to destination for the latest and greatest gadgets!
+Ultimate destination for cutting-edge, must-have gadgets!
 
 ## Live Website
 
@@ -26,14 +26,15 @@ Your go-to destination for the latest and greatest gadgets!
 
 ## Data Handling and Management
 
-- **LocalStorage**: To persist data (cart and wishlist) across sessions.Also for implementing sigh-up feature and personalized welcome massage for the signed-up user.
+- **LocalStorage**: To store & persist data (cart and wishlist) across sessions.Also for implementing sigh-up feature and personalized section for the signed-up user.
 
 ## Key Features
 
 1. **Structured Navigation:**
 
    - Navigation bar with active route indicators.
-   - Consistent layout across pages with a sticky navbar and footer.
+   - Consistent layout across all platforms such as mobile,laptop.
+   - 404 page for invalid link
 
 2. **Dynamic Product Pages:**
 
@@ -43,12 +44,15 @@ Your go-to destination for the latest and greatest gadgets!
 3. **Interactive Cart and Wishlist:**
 
    - Add/remove items in both the cart and wishlist.
-   - Prevent duplicate wishlist additions and handle max cart value of $1000.
+   - Prevent duplicate cart & wishlist additions.
+   - Add to cart directly from the wishlist with updated cart subtotal.
 
 4. **Enhanced User Experience:**
 
    - Sort cart items by price (descending).
    - Toast notifications for cart and wishlist updates.
+   - Display congratulatory modal upon purchase completion, followed by automatic cart reset.
+   - Gadget Heaven news for only the signed-up user
 
 5. **Statistics Page:**
    - Price vs. Product Name Composed Chart (Bar, Area, and Scatter).

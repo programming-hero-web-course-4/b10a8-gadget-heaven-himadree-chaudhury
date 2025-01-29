@@ -7,7 +7,7 @@ const Gadget = () => {
   // *All Products Store And Update Function
   const [products, setProducts] = useState([]);
 
-  // *Load All Products Data
+  // *Load All Products Data Onload
   useEffect(() => {
     fetch("gadgetProducts.json")
       .then((res) => res.json())
@@ -42,6 +42,7 @@ const Gadget = () => {
           handleAllProducts={handleAllProducts}
         ></SideBar>
       </div>
+      {/* Products Display Section */}
       <div className="lg:col-span-6">
         <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {viewCategory === "all" ? (
@@ -55,7 +56,7 @@ const Gadget = () => {
               <Product key={product.product_id} product={product}></Product>
             ))
           ) : (
-            // *Empty Product Category
+            // *Empty Product Category Message
             <div className="place-items-center border border-slate-200 rounded-2xl md:col-span-2 lg:col-span-3">
               <div className=" p-10 md:p-20 flex flex-col justify-center items-center space-y-3">
                 <img src={notFound} alt="" />

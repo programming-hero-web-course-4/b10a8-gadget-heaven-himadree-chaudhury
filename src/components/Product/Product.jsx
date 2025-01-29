@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
   const { product_id, product_title, product_image, price } = product;
+
   return (
     <div className="bg-slate-100 rounded-2xl p-4 space-y-4">
       <div className=" space-y-2 flex flex-col">
+        {/* Product Image */}
         <div className="w-full bg-white rounded-2xl flex justify-center">
           <img
             className="h-60 object-cover rounded-2xl"
@@ -13,11 +15,13 @@ const Product = ({ product }) => {
             alt={product_title}
           />
         </div>
+        {/* Short Details of Products */}
         <div className="grow pl-2">
           <h1 className="font-bold text-xl">{product_title}</h1>
           <p>Price : {price} $</p>
         </div>
       </div>
+      {/* Product Details Button */}
       <div>
         <Link
           to={`/products/${product_id}`}

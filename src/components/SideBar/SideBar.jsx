@@ -7,7 +7,9 @@ const SideBar = ({ handleCategory, handleAllProducts }) => {
   const [view, setView] = useState("all");
 
   return (
+    // *SideBar Button
     <div className="grid grid-cols-2 lg:grid-cols-1 gap-5 border border-slate-200 py-4 px-2 text-left rounded-2xl sidebar-btn">
+      {/* All Products Button (By Default It Is Activated) */}
       <button
         onClick={() => {
           setView("all");
@@ -20,6 +22,7 @@ const SideBar = ({ handleCategory, handleAllProducts }) => {
       >
         All Products
       </button>
+      {/* Laptop Category Button */}
       <button
         onClick={() => {
           setView("laptops");
@@ -32,6 +35,7 @@ const SideBar = ({ handleCategory, handleAllProducts }) => {
       >
         Laptops
       </button>
+      {/* Phone Category Button */}
       <button
         onClick={() => {
           setView("phones");
@@ -44,6 +48,7 @@ const SideBar = ({ handleCategory, handleAllProducts }) => {
       >
         Phones
       </button>
+      {/* Accessory Category Button */}
       <button
         onClick={() => {
           setView("accessories");
@@ -56,6 +61,7 @@ const SideBar = ({ handleCategory, handleAllProducts }) => {
       >
         Accessories
       </button>
+      {/* Smart Watch Category Button */}
       <button
         onClick={() => {
           setView("watches");
@@ -68,6 +74,7 @@ const SideBar = ({ handleCategory, handleAllProducts }) => {
       >
         Smart Watches
       </button>
+      {/* Tablet Category Button */}
       <button
         onClick={() => {
           setView("tablet");
@@ -78,8 +85,9 @@ const SideBar = ({ handleCategory, handleAllProducts }) => {
           color: view === "tablet" && "white",
         }}
       >
-        MacBook
+        Tablet
       </button>
+      {/* iPhone Category Button */}
       <button
         onClick={() => {
           setView("iphone");
@@ -95,6 +103,7 @@ const SideBar = ({ handleCategory, handleAllProducts }) => {
     </div>
   );
 };
+
 SideBar.propTypes = {
   handleCategory: PropTypes.func,
   handleAllProducts: PropTypes.func,

@@ -7,15 +7,18 @@ const Cart = ({ product, removeCartProduct }) => {
   return (
     <div className="flex justify-between lg:items-center border border-slate-200 rounded-lg p-3 mb-3">
       <div className="flex flex-col md:flex-row gap-5 items-center">
+        {/* Product Image */}
         <div className="w-40 overflow-hidden object-cover aspect-square rounded-xl border border-slate-200">
           <img src={product_image} alt={product_title} />
         </div>
+        {/* Details */}
         <div className="space-y-3">
           <h1 className="font-bold text-xl">{product_title}</h1>
           <p>{description}</p>
           <h2 className="font-semibold">Price : {price} $</h2>
         </div>
       </div>
+      {/* Remove From Cart Button */}
       <div className="cursor-pointer">
         <svg
           onClick={() => removeCartProduct(product_id)}

@@ -2,6 +2,7 @@ import { toast, Zoom } from "react-toastify";
 
 // *Handle Cart Local Storage
 
+// *Get Stored Cart Data
 const getCartList = () => {
   const storedCart = localStorage.getItem("cart");
   if (storedCart) {
@@ -12,9 +13,11 @@ const getCartList = () => {
   }
 };
 
+// *Add Product to Cart
 const addToStoredCart = (id) => {
   const storedList = getCartList();
   if (storedList.includes(id)) {
+    // *Already Added Product Toast
     toast.error("Product Already Added Once", {
       position: "top-center",
       autoClose: 2000,
@@ -47,6 +50,7 @@ const addToStoredCart = (id) => {
   }
 };
 
+// *Remove Product From Cart
 const removeFromStoredCart = (id) => {
   const storedList = getCartList();
   if (storedList.includes(id)) {
@@ -65,6 +69,7 @@ const removeAllCartProducts = () => {
 
 // *Handle Wishlist Local Storage
 
+// *Get Stored Wishlist Data
 const getWishList = () => {
   const storedWish = localStorage.getItem("wishlist");
   if (storedWish) {
@@ -75,6 +80,7 @@ const getWishList = () => {
   }
 };
 
+// *Add Product to Wishlist
 const addToWishedCart = (id) => {
   const storedWish = getWishList();
   if (storedWish.includes(id)) {
@@ -99,6 +105,7 @@ const addToWishedCart = (id) => {
   }
 };
 
+// *Remove Product From Wishlist
 const removeFromStoredWishlist = (id) => {
   const storedWish = getWishList();
   if (storedWish.includes(id)) {
@@ -111,8 +118,9 @@ const removeFromStoredWishlist = (id) => {
   }
 };
 
-// *Profile Local Storage
-// * Get local storage data
+// *HAndle Profile Local Storage
+
+// * Get Stored Profile Data
 const getStoredEmail = () => {
   const storedEmail = localStorage.getItem("email");
   if (storedEmail) {
@@ -128,7 +136,7 @@ const getStoredUserName = () => {
   return "";
 };
 
-// *Stored validation : Check if the visitor already sign-up
+// *Stored Validation : Check If The Visitor Already Signed-up
 const addEmailToLocalStorage = (input) => {
   let email = getStoredEmail();
   if (email === "" && input !== "") {
@@ -151,7 +159,7 @@ const addUserNameToLocalStorage = (input) => {
   }
 };
 
-// *Add email & username to local storage if the user didn't sign-up
+// *Add Profile To Local Storage If The User Didn't Sign-up
 const saveEmailToLocalStorage = (email) => {
   const emailStringify = JSON.stringify(email);
   localStorage.setItem("email", emailStringify);

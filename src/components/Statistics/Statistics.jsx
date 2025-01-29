@@ -29,7 +29,7 @@ const Statistics = () => {
       <Helmet>
         <title>GADGET HEAVEN | Statistics</title>
       </Helmet>
-
+      {/* Statistics Section Banner */}
       <section className="max-w-screen-2xl p-4 mx-auto">
         <div className="text-center">
           <div className="bg-[#9538E2] text-white rounded-2xl space-y-5 pb-20 pt-12">
@@ -43,6 +43,7 @@ const Statistics = () => {
             </p>
           </div>
         </div>
+        {/* Graph Section */}
         <div className="py-12">
           <div style={{ width: "100%", height: 400 }}>
             <ResponsiveContainer>

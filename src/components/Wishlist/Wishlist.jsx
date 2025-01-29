@@ -12,7 +12,6 @@ const Wishlist = ({ product, removeWishlistProduct, cartProducts }) => {
     description,
   } = product;
 
-
   // *Handle Add To Cart Button
   let cartAry = "";
   const handleAddToCart = () => {
@@ -20,21 +19,21 @@ const Wishlist = ({ product, removeWishlistProduct, cartProducts }) => {
       (cart) => cart.product_id === product_id && (cartAry = cart.product_id)
     );
     {
+      // *Product Add Functionality From Wishlist Or Toast For Already Added Product
       cartAry === product_id
         ? toast.error("Product Already Added Once", {
-              position: "top-center",
-              autoClose: 2000,
-              hideProgressBar: false,
-              closeOnClick: false,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              theme: "light",
-              transition: Zoom,
-            })
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Zoom,
+          })
         : (addToStoredCart(product_id), removeWishlistProduct(product_id));
     }
-   
   };
 
   return (
@@ -47,10 +46,9 @@ const Wishlist = ({ product, removeWishlistProduct, cartProducts }) => {
           <h1 className="font-bold text-xl">{product_title}</h1>
           <p>{description}</p>
           <h2 className="font-semibold">Price : {price} $</h2>
-          {/* Add To Cart Btn */}
+          {/* Add To Cart Button */}
           <button
             disabled={availability === false}
-            // )}
             onClick={() => handleAddToCart()}
             className={`font-semibold px-4 py-2 -ml-2 rounded-xl ${
               availability === false
@@ -62,6 +60,7 @@ const Wishlist = ({ product, removeWishlistProduct, cartProducts }) => {
           </button>
         </div>
       </div>
+      {/* Remove From Wishlist Button */}
       <div className="cursor-pointer">
         <svg
           onClick={() => removeWishlistProduct(product_id)}
@@ -83,6 +82,7 @@ const Wishlist = ({ product, removeWishlistProduct, cartProducts }) => {
     </div>
   );
 };
+
 Wishlist.propTypes = {
   product: PropTypes.object,
   removeWishlistProduct: PropTypes.func,
