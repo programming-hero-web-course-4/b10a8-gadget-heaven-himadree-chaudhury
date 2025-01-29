@@ -2,6 +2,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import "./ProductDetail.css";
 import { useState } from "react";
 import { addToStoredCart, addToWishedCart } from "../../utilities/localStorage";
+import { Helmet } from "react-helmet-async";
 
 const ProductDetails = () => {
   // *Get Product ID
@@ -50,6 +51,11 @@ const ProductDetails = () => {
 
   return (
     <div>
+      {/* React Helmet */}
+      <Helmet>
+        <title>GADGET HEAVEN | {product_title}</title>
+      </Helmet>
+
       <section className="max-w-screen-2xl mx-auto relative mb-96 md:mb-40 pb-96">
         {/* Product Details Banner */}
         <div className="">
