@@ -6,4 +6,5 @@
 /* !Universal Style */
 body {
   font-family: "Sora", serif;
+  scroll-behavior: smooth;
 }

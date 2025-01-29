@@ -22,9 +22,12 @@ const Home = () => {
               next level. From smart devices to the coolest accessories, we have
               it all!
             </p>
-            <button className="text-[#9538E2] bg-white px-6 md:px-8 py-3 text-lg font-semibold rounded-2xl border border-white">
-              Shop Now
-            </button>
+            {/* Shop Now Button */}
+            <a href="#gadget-section">
+              <button className="text-[#9538E2] bg-white px-6 md:px-8 py-3 text-lg font-semibold rounded-2xl border border-white cursor-pointer">
+                Shop Now
+              </button>
+            </a>
           </div>
         </div>
         {/* Banner Image */}
@@ -35,7 +38,7 @@ const Home = () => {
         </div>
       </header>
       {/* Featured Products */}
-      <section className="p-4">
+      <section id="gadget-section" className="p-4">
         <div className="pt-44 md:pt-64 lg:pt-80">
           <h1 className="text-center font-bold text-3xl">
             Explore Cutting-Edge Gadgets
